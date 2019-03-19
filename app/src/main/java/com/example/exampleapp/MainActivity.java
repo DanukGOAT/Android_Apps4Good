@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//Jajajajajajajajjjajajajajajajaja
+//Jajajajajajajajjjajajajajajajajaja
 public class MainActivity extends AppCompatActivity {
 
     private final String TAG = "MainActivity";
