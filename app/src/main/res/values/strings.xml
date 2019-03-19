@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="firstNumText">Enter first number:</string>
+    <string name="inputFieldHint">enter a real number</string>
+    <string name="secondNumText">Enter second number:</string>
+    <string name="calculateButton">Calculate</string>
+</resources>
