@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+//what up dudes
 public class AnswerActivity extends AppCompatActivity {
 
     @Override
