@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+
+//If you can see this, the GitHubs be workin
+//  - Nathan
 public class AnswerActivity extends AppCompatActivity {
 
     @Override
