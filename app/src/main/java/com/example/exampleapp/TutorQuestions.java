@@ -3,7 +3,6 @@ package com.example.exampleapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-//JJJJJJ
 public class TutorQuestions extends AppCompatActivity {
 
     @Override
