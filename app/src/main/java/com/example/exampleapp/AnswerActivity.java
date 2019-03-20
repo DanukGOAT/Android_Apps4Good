@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 //If you can see this, the GitHubs be workin
 //  - Nathan fslkjeg
+// yeah we the best ever
+//-Danush
 public class AnswerActivity extends AppCompatActivity {
 
     @Override
