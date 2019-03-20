@@ -9,5 +9,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/QuestionOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Question 1" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
