@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 "Adding values: " + numOne + " and " + numTwo, Toast.LENGTH_LONG);
         toast.show();
 
-        Intent intent = new  Intent(this, AnswerActivity.class);
+        Intent intent = new  Intent(this, TutorQuestions.class);
         intent.putExtra("answer", ans);
         startActivity(intent);
     }
