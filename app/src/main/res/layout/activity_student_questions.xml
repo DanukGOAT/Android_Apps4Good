@@ -6,29 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".StudentQuestions">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/QuestionOne"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="1. What subjects do you need help with?"
-            android:textSize="40sp" />
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:layout_weight="1"
-            android:ellipsize="none"
-            android:maxLines="100"
-            android:scrollHorizontally="false"
-            />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/questionOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. What subjects do you need help with?"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+            <CheckBox
+                android:id="@+id/answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Math" />
+
+            <CheckBox
+                android:id="@+id/answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Physics" />
+
+            <CheckBox
+                android:id="@+id/answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="STEM" />
+
+            <CheckBox
+                android:id="@+id/answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="STW" />
+
+            <CheckBox
+                android:id="@+id/answer5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Humanities" />
+
+            <CheckBox
+                android:id="@+id/answer6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spanish" />
+
+            <CheckBox
+                android:id="@+id/answer7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Franch" />
+
+            <CheckBox
+                android:id="@+id/answer8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Computer Science" />
+
+            <TextView
+                android:id="@+id/questionTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. How would you prefer to be taught?"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
