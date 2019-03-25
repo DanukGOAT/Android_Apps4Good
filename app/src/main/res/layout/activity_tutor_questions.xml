@@ -6,72 +6,100 @@
     android:layout_height="match_parent"
     tools:context=".TutorQuestions">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/QuestionOne"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1. What subjects are you comfortable with teaching?"
-            android:textColor="@android:color/black"
-            android:textSize="30sp" />
+            android:orientation="vertical" >
 
-        <CheckBox
-            android:id="@+id/Answer1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Math" />
+            <TextView
+                android:id="@+id/QuestionOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="What subjects are you comfortable with teaching?"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
 
-        <CheckBox
-            android:id="@+id/Answer2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Physics" />
+            <CheckBox
+                android:id="@+id/Q1Answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Math" />
 
-        <CheckBox
-            android:id="@+id/Answer3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="STEM" />
+            <CheckBox
+                android:id="@+id/Q1Answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Physics" />
 
-        <CheckBox
-            android:id="@+id/Answer4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="STW" />
+            <CheckBox
+                android:id="@+id/Q1Answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="STEM" />
 
-        <CheckBox
-            android:id="@+id/Answer5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Humanities" />
+            <CheckBox
+                android:id="@+id/Q1Answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="STW" />
 
-        <CheckBox
-            android:id="@+id/Answer6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Spanish" />
+            <CheckBox
+                android:id="@+id/Q1Answer5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Humanities" />
 
-        <CheckBox
-            android:id="@+id/Answer7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Franch" />
+            <CheckBox
+                android:id="@+id/Q1Answer6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spanish" />
 
-        <CheckBox
-            android:id="@+id/Answer8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Computer Science" />
+            <CheckBox
+                android:id="@+id/Q1Answer7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Franch" />
 
-        <TextView
-            android:id="@+id/QuestionTwo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="2. " />
-    </LinearLayout>
+            <CheckBox
+                android:id="@+id/Q1Answer8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Computer Science" />
+
+            <TextView
+                android:id="@+id/QuestionTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="How would you prefer to work with a student?"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+            <CheckBox
+                android:id="@+id/Q2Answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="At his/her home" />
+
+            <CheckBox
+                android:id="@+id/Q2Answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="At my home" />
+
+            <CheckBox
+                android:id="@+id/Q2Answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Public area (library, school, etc.)" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
