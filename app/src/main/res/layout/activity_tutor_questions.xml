@@ -11,13 +11,67 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/SubjectChoice"
+        <TextView
+            android:id="@+id/QuestionOne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Choose all subjects"
-            android:textSize="36sp" />
+            android:text="1. What subjects are you comfortable with teaching?"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+        <CheckBox
+            android:id="@+id/Answer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Math" />
+
+        <CheckBox
+            android:id="@+id/Answer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Physics" />
+
+        <CheckBox
+            android:id="@+id/Answer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="STEM" />
+
+        <CheckBox
+            android:id="@+id/Answer4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="STW" />
+
+        <CheckBox
+            android:id="@+id/Answer5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Humanities" />
+
+        <CheckBox
+            android:id="@+id/Answer6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spanish" />
+
+        <CheckBox
+            android:id="@+id/Answer7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Franch" />
+
+        <CheckBox
+            android:id="@+id/Answer8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Computer Science" />
+
+        <TextView
+            android:id="@+id/QuestionTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. " />
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
