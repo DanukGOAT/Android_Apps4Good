@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TutorQuestions"></activity>
+        <activity android:name=".CalendarDisplay"></activity>
+        <activity android:name=".TutorQuestions" />
         <activity android:name=".InitPage" />
         <activity android:name=".HomePage" />
         <activity android:name=".AnswerActivity" />
