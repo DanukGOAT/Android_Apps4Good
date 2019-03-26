@@ -102,14 +102,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="No preference" />
+
+            <Button
+                android:id="@+id/finishButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Finish"
+                tools:layout_editor_absoluteX="161dp"
+                tools:layout_editor_absoluteY="587dp" />
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/finishButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Finish"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="587dp" />
 </android.support.constraint.ConstraintLayout>
