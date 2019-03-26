@@ -19,7 +19,8 @@
                 android:id="@+id/questionOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1. What subjects do you need help with?"
+                android:text="What subjects do you need help with?"
+                android:gravity="center"
                 android:textColor="@android:color/black"
                 android:textSize="30sp" />
 
@@ -75,7 +76,8 @@
                 android:id="@+id/questionTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="2. How would you prefer to be taught?"
+                android:gravity="center"
+                android:text="How would you prefer to be taught?"
                 android:textColor="@android:color/black"
                 android:textSize="30sp" />
 
