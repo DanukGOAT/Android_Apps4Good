@@ -4,4 +4,7 @@
     <string name="inputFieldHint">enter a real number</string>
     <string name="secondNumText">Enter second number:</string>
     <string name="calculateButton">Calculate</string>
+    <string name="initQuestionText">Are you a Student or a Tutor?</string>
+    <string name="studentButtonText">Student</string>
+    <string name="tutorButtonText">Tutor</string>
 </resources>

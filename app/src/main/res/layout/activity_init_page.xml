@@ -13,10 +13,25 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/initQuestion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="@string/initQuestionText"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/studentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="studentButtonPress"
+            android:text="@string/studentButtonText" />
+
+        <Button
+            android:id="@+id/tutorButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="tutorButtonPress"
+            android:text="@string/tutorButtonText" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

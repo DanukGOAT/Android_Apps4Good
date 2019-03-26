@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".TutorQuestions"></activity>
-        <activity android:name=".InitPage" />
+        <activity android:name=".InitPage"/>
+        <activity android:name=".StudentQuestions"></activity>
         <activity android:name=".HomePage" />
         <activity android:name=".AnswerActivity" />
         <activity android:name=".MainActivity">
