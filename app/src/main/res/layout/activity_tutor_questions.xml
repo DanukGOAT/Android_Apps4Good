@@ -23,6 +23,8 @@
                 android:text="What subjects are you comfortable with teaching?"
                 android:textColor="@android:color/black"
                 android:textSize="30sp" />
+                <!--android:paddingTop="5pt"
+                android:paddingBottom="4pt"-->
 
             <CheckBox
                 android:id="@+id/Q1Answer1"
@@ -80,18 +82,20 @@
                 android:text="How would you prefer to work with a student?"
                 android:textColor="@android:color/black"
                 android:textSize="30sp" />
+                <!--android:paddingTop="8pt"
+                android:paddingBottom="4pt"-->
 
             <CheckBox
                 android:id="@+id/Q2Answer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="At his/her home" />
+                android:text="At my home" />
 
             <CheckBox
                 android:id="@+id/Q2Answer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="At my home" />
+                android:text="At their home" />
 
             <CheckBox
                 android:id="@+id/Q2Answer3"
@@ -104,6 +108,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Over an online video call" />
+
+            <CheckBox
+                android:id="@+id/Q2Answer5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No preference" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NEXT" />
 
         </LinearLayout>
     </ScrollView>
