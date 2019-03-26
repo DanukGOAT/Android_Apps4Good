@@ -97,7 +97,13 @@
                 android:id="@+id/Q2Answer3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Public area (library, school, etc.)" />
+                android:text="At a public place (school, library, etc.)" />
+
+            <CheckBox
+                android:id="@+id/Q2Answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Over an online video call" />
 
         </LinearLayout>
     </ScrollView>
