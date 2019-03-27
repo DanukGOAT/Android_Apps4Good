@@ -4,56 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".InitPage">
 
     <LinearLayout
-        android:id="@+id/Container"
-        android:layout_width="396dp"
-        android:layout_height="715dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/firstNumLabel"
+            android:id="@+id/initQuestion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/firstNumText" />
-
-        <EditText
-            android:id="@+id/firstNum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/inputFieldHint"
-            android:inputType="numberSigned|numberDecimal" />
-
-        <TextView
-            android:id="@+id/secondNumLabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/secondNumText" />
-
-        <EditText
-            android:id="@+id/secondNum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/inputFieldHint"
-            android:inputType="numberSigned|numberDecimal" />
+            android:text="@string/initQuestionText"
+            android:textSize="30sp" />
 
         <Button
-            android:id="@+id/calculateButton"
+            android:id="@+id/studentButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="calculate"
-            android:text="@string/calculateButton" />
+            android:onClick="studentButtonPress"
+            android:text="@string/studentButtonText" />
 
-        <TextView
-            android:id="@+id/answerLabel"
+        <Button
+            android:id="@+id/tutorButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:onClick="tutorButtonPress"
+            android:text="@string/tutorButtonText" />
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
