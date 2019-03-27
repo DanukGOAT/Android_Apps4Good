@@ -7,4 +7,5 @@
     <string name="initQuestionText">Are you a Student or a Tutor?</string>
     <string name="studentButtonText">Student</string>
     <string name="tutorButtonText">Tutor</string>
+    <string name="title_activity_nav_bar">NavBar</string>
 </resources>
