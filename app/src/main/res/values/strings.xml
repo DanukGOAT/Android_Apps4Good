@@ -8,4 +8,5 @@
     <string name="studentButtonText">Student</string>
     <string name="tutorButtonText">Tutor</string>
     <string name="title_activity_nav_bar">NavBar</string>
+    <string name="debugButtonText">Debug</string>
 </resources>
