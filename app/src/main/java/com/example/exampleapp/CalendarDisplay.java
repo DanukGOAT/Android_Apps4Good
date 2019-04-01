@@ -10,6 +10,7 @@ import android.widget.CalendarView;
 import android.widget.TextView;
 
 public class CalendarDisplay extends AppCompatActivity {
+    public String date="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +22,10 @@ public class CalendarDisplay extends AppCompatActivity {
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                String date = dayOfMonth + "/"+ month+"/"+year;
-                Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
-                intent.putExtra("Personal Contact Information", date);
-
-                startActivity(intent);
+                date = month + "/"+ dayOfMonth+"/"+year;
+//                Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
+//                intent.putExtra("Personal Contact Information", date);
+//                startActivity(intent);
             }
         });
         Button testButton = findViewById(R.id.testButton);
@@ -33,6 +33,7 @@ public class CalendarDisplay extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
+                intent.putExtra("Personal Contact Information", date);
                 startActivity(intent);
             }
         });
