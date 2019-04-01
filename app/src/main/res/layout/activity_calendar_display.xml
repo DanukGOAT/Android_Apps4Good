@@ -36,6 +36,12 @@
                 android:text="Enter any times that you are available (you can enter more later)"
                 android:textColor="@android:color/black"
                 android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/testButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile Info Test Button" />
             <!--android:maxDate="10/22/2001"
                 android:minDate="10/22/2019"-->
         </LinearLayout>

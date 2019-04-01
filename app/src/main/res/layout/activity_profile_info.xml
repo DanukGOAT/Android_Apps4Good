@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:text="Insert Number of times that you have tutored"/>
+            android:text="Insert Number of times that you have tutored" />
 
         <EditText
             android:id="@+id/subjects"
@@ -65,7 +65,7 @@
             android:id="@+id/editButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Edit" />
+            android:text="Finish" />
 
         <TextView
             android:id="@+id/personalContactInfo"
