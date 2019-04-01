@@ -10,7 +10,11 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:id="@+id/initQuestion"
@@ -19,19 +23,36 @@
             android:text="@string/initQuestionText"
             android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/studentButton"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="studentButtonPress"
-            android:text="@string/studentButtonText" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/studentButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="studentButtonPress"
+                android:text="@string/studentButtonText"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/tutorButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="tutorButtonPress"
+                android:text="@string/tutorButtonText"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
 
         <Button
-            android:id="@+id/tutorButton"
+            android:id="@+id/debugButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="tutorButtonPress"
-            android:text="@string/tutorButtonText" />
+            android:onClick="debugButtonPress"
+            android:text="@string/debugButtonText" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

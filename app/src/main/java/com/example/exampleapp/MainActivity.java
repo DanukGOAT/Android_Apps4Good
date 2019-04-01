@@ -22,4 +22,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, TutorQuestions.class);
         startActivity(intent);
     }
+
+    public void debugButtonPress(View v){
+        Intent intent = new Intent(this, NavBar.class);
+        startActivity(intent);
+    }
 }

@@ -4,8 +4,9 @@
     <string name="inputFieldHint">enter a real number</string>
     <string name="secondNumText">Enter second number:</string>
     <string name="calculateButton">Calculate</string>
-    <string name="ProfileInfoText" />
-    <string name="profileInfo" />
-    <string name="profileInformation">Insert personal blurb here</string>
-    <string name="tutorExperience">Insert number of times you have tutored</string>
+    <string name="initQuestionText">Are you a Student or a Tutor?</string>
+    <string name="studentButtonText">Student</string>
+    <string name="tutorButtonText">Tutor</string>
+    <string name="title_activity_nav_bar">NavBar</string>
+    <string name="debugButtonText">Debug</string>
 </resources>
