@@ -9,4 +9,5 @@
     <string name="tutorButtonText">Tutor</string>
     <string name="title_activity_nav_bar">NavBar</string>
     <string name="debugButtonText">Debug</string>
+    <string name="tutorExperience">Insert number of times you have tutored</string>
 </resources>

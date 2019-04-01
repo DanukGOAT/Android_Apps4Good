@@ -27,8 +27,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:text="Insert personal blurb here"
-            tools:text="@string/profileInformation" />
+            android:text="Insert personal blurb here" />
 
         <EditText
             android:id="@+id/tutorExperience"
@@ -36,8 +35,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:text="Insert Number of times that you have tutore"
-            tools:text="@string/tutorExperience" />
+            android:text="Insert Number of times that you have tutored"/>
 
         <EditText
             android:id="@+id/subjects"
@@ -64,13 +62,13 @@
             android:text="link to MAMS website" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/editButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Edit" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/personalContactInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Personal Contact Information"

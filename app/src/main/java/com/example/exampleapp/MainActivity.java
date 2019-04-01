@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void debugButtonPress(View v){
-        Intent intent = new Intent(this, NavBar.class);
+        Intent intent = new Intent(this, CalendarDisplay.class);
         startActivity(intent);
     }
 }
