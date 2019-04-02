@@ -43,4 +43,13 @@ public class TutorQuestions extends AppCompatActivity {
             if (ja.get(i).isChecked())
                 preferences.add(i);
     }
+
+    public ArrayList<Integer> getSubjects() {
+        return subjects;
+    }
+
+    public ArrayList<Integer> getPreferences() {
+        return preferences;
+    }
+
 }
