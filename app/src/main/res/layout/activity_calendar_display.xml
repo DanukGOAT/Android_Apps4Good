@@ -29,19 +29,33 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/calendarCaption"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Enter any times that you are available (you can enter more later)"
+                android:text="@string/calendarCaptionText"
                 android:textColor="@android:color/black"
                 android:textSize="24sp" />
 
-            <Button
-                android:id="@+id/testButton"
+            <CheckBox
+                android:id="@+id/weeklyCheckBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Profile Info Test Button" />
+                android:text="@string/weeklyCheckBoxText" />
+
+            <Button
+                android:id="@+id/addTimeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/addTimeButtonText" />
+
+            <Button
+                android:id="@+id/finishedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/finishedButtonText"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="450dp" />
             <!--android:maxDate="10/22/2001"
                 android:minDate="10/22/2019"-->
         </LinearLayout>
