@@ -19,8 +19,8 @@
                 android:id="@+id/questionOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="What subjects do you need help with?"
                 android:gravity="center"
+                android:text="@string/stdntQuestionOne"
                 android:textColor="@android:color/black"
                 android:textSize="30sp" />
 
@@ -28,88 +28,94 @@
                 android:id="@+id/Q1answer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Math" />
+                android:text="@string/questionOneAnsOne" />
 
             <CheckBox
                 android:id="@+id/Q1answer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Physics" />
+                android:text="@string/questionOneAnsTwo" />
 
             <CheckBox
                 android:id="@+id/Q1answer3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="STEM" />
+                android:text="@string/questionOneAnsTre" />
 
             <CheckBox
                 android:id="@+id/Q1answer4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="STW" />
+                android:text="@string/questionOneAnsFor" />
 
             <CheckBox
                 android:id="@+id/Q1answer5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Humanities" />
+                android:text="@string/questionOneAnsFiv" />
 
             <CheckBox
                 android:id="@+id/Q1answer6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Spanish" />
+                android:text="@string/questionOneAnsSix" />
 
             <CheckBox
                 android:id="@+id/Q1answer7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Franch" />
+                android:text="@string/questionOneAnsSvn" />
 
             <CheckBox
                 android:id="@+id/Q1answer8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Computer Science" />
+                android:text="@string/questionOneAnsAte" />
 
             <TextView
                 android:id="@+id/questionTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="How would you prefer to be taught?"
+                android:text="@string/stdntQuestionTwo"
                 android:textColor="@android:color/black"
                 android:textSize="30sp" />
 
             <CheckBox
-                android:id="@+id/q2Answer"
+                android:id="@+id/q2Answer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="At my home" />
+                android:text="@string/questionTwoAnsOne" />
 
             <CheckBox
                 android:id="@+id/q2Answer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="At their home" />
+                android:text="@string/questionTwoAnsTwo" />
 
             <CheckBox
                 android:id="@+id/q2Answer3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Public area (library, school, etc.)" />
+                android:text="@string/questionTwoAnsTre" />
 
             <CheckBox
                 android:id="@+id/q2Answer4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="No preference" />
+                android:text="@string/questionTwoAnsFor" />
+
+            <CheckBox
+                android:id="@+id/q2Answer5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/questionTwoAnsFiv" />
 
             <Button
                 android:id="@+id/finishButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Finish"
+                android:text="@string/next"
                 tools:layout_editor_absoluteX="161dp"
                 tools:layout_editor_absoluteY="587dp" />
         </LinearLayout>

@@ -10,4 +10,22 @@
     <string name="title_activity_nav_bar">NavBar</string>
     <string name="debugButtonText">Debug</string>
     <string name="tutorExperience">Insert number of times you have tutored</string>
+    <string name="tutorQuestionOne">What subjects are you comfortable with teaching?</string>
+    <string name="stdntQuestionOne">What subjects do you need help with?</string>
+    <string name="questionOneAnsOne">Math</string>
+    <string name="questionOneAnsTwo">Physics</string>
+    <string name="questionOneAnsTre">STEM</string>
+    <string name="questionOneAnsFor">STW</string>
+    <string name="questionOneAnsFiv">Humanities</string>
+    <string name="questionOneAnsSix">Spanish</string>
+    <string name="questionOneAnsSvn">Franch</string>
+    <string name="questionOneAnsAte">Computer Science</string>
+    <string name="tutorQuestionTwo">How would you prefer to work with a student?</string>
+    <string name="stdntQuestionTwo">How would you prefer to be taught?</string>
+    <string name="questionTwoAnsOne">At my home</string>
+    <string name="questionTwoAnsTwo">At their home</string>
+    <string name="questionTwoAnsTre">At a public place (library, school, etc.)</string>
+    <string name="questionTwoAnsFor">Over an online video call</string>
+    <string name="questionTwoAnsFiv">No preference</string>
+    <string name="next">NEXT</string>
 </resources>
