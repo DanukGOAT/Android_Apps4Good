@@ -10,8 +10,4 @@
     <string name="title_activity_nav_bar">NavBar</string>
     <string name="debugButtonText">Debug</string>
     <string name="tutorExperience">Insert number of times you have tutored</string>
-    <string name="finishedButtonText">Finished</string>
-    <string name="weeklyCheckBoxText">Weekly</string>
-    <string name="addTimeButtonText">Add time</string>
-    <string name="calendarCaptionText">Enter a time when you are available to tutor</string>
 </resources>
