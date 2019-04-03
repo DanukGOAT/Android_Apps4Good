@@ -41,8 +41,17 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="31dp"
                     android:layout_weight="1"
-                    android:text="Start Time"
-                    android:textSize="30sp" />
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textSize="24sp"
+                    tools:text="to" />
 
                 <TextView
                     android:id="@+id/textView"
@@ -52,8 +61,9 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="31dp"
                     android:layout_weight="1"
-                    android:text="End Time"
-                    android:textSize="30sp" />
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -68,7 +78,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_weight="1"
-                    android:text="Start Time" />
+                    android:text="00:00" />
 
                 <Button
                     android:id="@+id/button"
@@ -77,7 +87,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_weight="1"
-                    android:text="End Time" />
+                    android:text="00:00" />
 
             </LinearLayout>
 
