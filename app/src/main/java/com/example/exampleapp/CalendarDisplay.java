@@ -28,6 +28,14 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
             }
         });
 
+        Button button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment timePicker = new TimePickerFragment();
+                timePicker.show(getSupportFragmentManager(), "time picker");
+            }
+        });
 
         CalendarView calendarView = findViewById(R.id.Calendarr);
 
