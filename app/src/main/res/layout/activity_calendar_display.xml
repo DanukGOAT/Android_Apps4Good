@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Enter times when you are available to tutor, then tap finished when you are finished adding times."
+                android:text="@string/calendarCaptionText"
                 android:textColor="@android:color/black"
                 android:textSize="19sp" />
 
@@ -41,7 +41,7 @@
                 android:id="@+id/weeklyCheckBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Weekly" />
+                android:text="@string/weeklyCheckBoxText" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -49,35 +49,30 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/startTimeDisplay"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_above="@id/button"
-                    android:layout_centerHorizontal="true"
                     android:layout_marginBottom="31dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="00:00"
+                    android:text="@string/timeDisplayText"
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/toText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="to"
-                    android:textSize="24sp"
-                    tools:text="to" />
+                    android:text="@string/toTextText"
+                    android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/endTimeDisplay"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_above="@id/button"
-                    android:layout_centerHorizontal="true"
                     android:layout_marginBottom="31dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="00:00"
+                    android:text="@string/timeDisplayText"
                     android:textSize="24sp" />
             </LinearLayout>
 
@@ -87,22 +82,19 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/startTimeButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
                     android:layout_weight="1"
-                    android:text="@string/button2Text" />
+                    android:text="@string/startTimeButtonText" />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/endTimeButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_weight="1"
-                    android:text="@string/buttonText" />
+                    android:text="@string/endTimeButtonText" />
 
             </LinearLayout>
 
@@ -110,13 +102,13 @@
                 android:id="@+id/addTimeButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add Time" />
+                android:text="@string/addTimeButtonText" />
 
             <Button
                 android:id="@+id/finishedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Finished"
+                android:text="@string/finishedButtonText"
                 tools:layout_editor_absoluteX="30dp"
                 tools:layout_editor_absoluteY="450dp" />
             <!--android:maxDate="10/22/2001"

@@ -20,8 +20,8 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar_display);
 
-        Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button endTimeButton = (Button) findViewById(R.id.endTimeButton);
+        endTimeButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -31,8 +31,8 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
             }
         });
 
-        Button button2 = (Button) findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
+        Button startTimeButton = (Button) findViewById(R.id.startTimeButton);
+        startTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 isStartTime = false;
@@ -78,13 +78,13 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         if(isStartTime)
         {
 
-            TextView textView = (TextView) findViewById(R.id.textView);
-            textView.setText(hourOfDay + ":" + minute);
+            TextView endTimeDisplay = (TextView) findViewById(R.id.endTimeDisplay);
+            endTimeDisplay.setText(hourOfDay + ":" + minute);
         }
         else
         {
-            TextView textView2 = (TextView) findViewById(R.id.textView2);
-            textView2.setText(hourOfDay + ":" + minute);
+            TextView startTimeDisplay = (TextView) findViewById(R.id.startTimeDisplay);
+            startTimeDisplay.setText(hourOfDay + ":" + minute);
         }
 
     }

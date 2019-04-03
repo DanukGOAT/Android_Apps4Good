@@ -30,4 +30,12 @@
     <string name="next">NEXT</string>
     <string name="button2Text">Start Time</string>
     <string name="buttonText">End Time</string>
+    <string name="calendarCaptionText">Enter times when you are available to tutor, then tap finished when you are finished adding times.</string>
+    <string name="weeklyCheckBoxText">Weekly</string>
+    <string name="timeDisplayText">00:00</string>
+    <string name="toTextText">to</string>
+    <string name="startTimeButtonText">Start Time</string>
+    <string name="endTimeButtonText">End Time</string>
+    <string name="addTimeButtonText">Add Time</string>
+    <string name="finishedButtonText">Finished</string>
 </resources>
