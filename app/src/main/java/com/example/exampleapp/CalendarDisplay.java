@@ -14,6 +14,7 @@ import android.widget.TimePicker;
 
 public class CalendarDisplay extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
     public String date="";
+    public boolean isStartTime=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +22,10 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
 
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                isStartTime = true;
                 DialogFragment timePicker = new TimePickerFragment();
                 timePicker.show(getSupportFragmentManager(), "time picker");
             }
@@ -32,6 +35,7 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                isStartTime = false;
                 DialogFragment timePicker = new TimePickerFragment();
                 timePicker.show(getSupportFragmentManager(), "time picker");
             }
@@ -71,7 +75,17 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
     }
 
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        TextView textView = (TextView) findViewById(R.id.textView);
-        textView.setText(hourOfDay + ":" + minute);
+        if(isStartTime)
+        {
+
+            TextView textView = (TextView) findViewById(R.id.textView);
+            textView.setText(hourOfDay + ":" + minute);
+        }
+        else
+        {
+            TextView textView2 = (TextView) findViewById(R.id.textView2);
+            textView2.setText(hourOfDay + ":" + minute);
+        }
+
     }
 }
