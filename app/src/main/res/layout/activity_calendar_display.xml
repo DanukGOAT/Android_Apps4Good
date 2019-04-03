@@ -35,21 +35,23 @@
 
                 <TextView
                     android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_above="@id/button"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="31dp"
+                    android:layout_weight="1"
                     android:text="Start Time"
                     android:textSize="30sp" />
 
                 <TextView
                     android:id="@+id/textView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_above="@id/button"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="31dp"
+                    android:layout_weight="1"
                     android:text="End Time"
                     android:textSize="30sp" />
             </LinearLayout>
@@ -61,18 +63,20 @@
 
                 <Button
                     android:id="@+id/button2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
+                    android:layout_weight="1"
                     android:text="Start Time" />
 
                 <Button
                     android:id="@+id/button"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
+                    android:layout_weight="1"
                     android:text="End Time" />
 
             </LinearLayout>
