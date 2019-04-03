@@ -14,6 +14,7 @@ import android.widget.TimePicker;
 
 public class CalendarDisplay extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
     public String date="";
+    public int buttonNumber=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,7 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonNumber=1;
                 DialogFragment timePicker = new TimePickerFragment();
                 timePicker.show(getSupportFragmentManager(), "time picker");
             }
@@ -32,6 +34,7 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonNumber=2;
                 DialogFragment timePicker = new TimePickerFragment();
                 timePicker.show(getSupportFragmentManager(), "time picker");
             }
@@ -71,7 +74,15 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
     }
 
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        TextView textView = (TextView) findViewById(R.id.textView);
-        textView.setText("Hour: " + hourOfDay + " Minute: " + minute);
+        if(buttonNumber==1) {
+            TextView textView = (TextView) findViewById(R.id.textView);
+            textView.setText("Hour: " + hourOfDay + " Minute: " + minute);
+        }else if(buttonNumber==2){
+            TextView textView = (TextView) findViewById(R.id.textView2);
+            textView.setText("Hour: " + hourOfDay + " Minute: " + minute);
+        }else{
+            TextView textView = (TextView) findViewById(R.id.textView);
+            textView.setText("Ummm that didn't work...");
+        }
     }
 }
