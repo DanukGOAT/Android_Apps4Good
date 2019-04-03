@@ -14,7 +14,6 @@ import android.widget.TimePicker;
 
 public class CalendarDisplay extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
     public String date="";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
