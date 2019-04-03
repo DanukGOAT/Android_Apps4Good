@@ -8,7 +8,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#B5E8EC">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,7 +23,11 @@
                 android:gravity="center"
                 android:text="@string/stdntQuestionOne"
                 android:textColor="@android:color/black"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:paddingTop="10sp"
+                android:paddingBottom="10sp"
+                android:paddingLeft="6sp"
+                android:paddingRight="6sp"/>
 
             <CheckBox
                 android:id="@+id/Q1answer1"
@@ -79,7 +84,11 @@
                 android:gravity="center"
                 android:text="@string/stdntQuestionTwo"
                 android:textColor="@android:color/black"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:paddingTop="15sp"
+                android:paddingBottom="10sp"
+                android:paddingLeft="6sp"
+                android:paddingRight="6sp"/>
 
             <CheckBox
                 android:id="@+id/q2Answer1"
@@ -115,7 +124,10 @@
                 android:id="@+id/finishButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_button"
                 android:text="@string/next"
+                android:textColor="@android:color/white"
+                android:paddingTop="10sp"
                 tools:layout_editor_absoluteX="161dp"
                 tools:layout_editor_absoluteY="587dp" />
         </LinearLayout>
