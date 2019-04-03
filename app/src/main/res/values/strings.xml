@@ -28,4 +28,6 @@
     <string name="questionTwoAnsFor">Online</string>
     <string name="questionTwoAnsFiv">No preference</string>
     <string name="next">NEXT</string>
+    <string name="button2Text">Start Time</string>
+    <string name="buttonText">End Time</string>
 </resources>

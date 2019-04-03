@@ -15,6 +15,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/calendarCaption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Enter times when you are available to tutor, then tap finished when you are finished adding times."
+                android:textColor="@android:color/black"
+                android:textSize="19sp" />
+
             <CalendarView
                 android:id="@+id/Calendarr"
                 android:layout_width="match_parent"
@@ -27,6 +36,12 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/weeklyCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weekly" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -78,7 +93,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_weight="1"
-                    android:text="00:00" />
+                    android:text="@string/button2Text" />
 
                 <Button
                     android:id="@+id/button"
@@ -87,24 +102,9 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_weight="1"
-                    android:text="00:00" />
+                    android:text="@string/buttonText" />
 
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/calendarCaption"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Enter a time when you are available to tutor"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
-
-            <CheckBox
-                android:id="@+id/weeklyCheckBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Weekly" />
 
             <Button
                 android:id="@+id/addTimeButton"
