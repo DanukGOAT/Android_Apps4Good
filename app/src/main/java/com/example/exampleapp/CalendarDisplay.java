@@ -72,6 +72,6 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
 
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         TextView textView = (TextView) findViewById(R.id.textView);
-        textView.setText("Hour: " + hourOfDay + " Minute: " + minute);
+        textView.setText(hourOfDay + ":" + minute);
     }
 }
