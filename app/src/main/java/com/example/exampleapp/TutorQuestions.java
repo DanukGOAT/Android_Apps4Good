@@ -1,7 +1,9 @@
 package com.example.exampleapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CheckBox;
 
 import java.util.ArrayList;
@@ -52,4 +54,8 @@ public class TutorQuestions extends AppCompatActivity {
         return preferences;
     }
 
+    public void tutorNextButtonPress(View v){
+        Intent intent = new Intent(this, CalendarDisplay.class);
+        startActivity(intent);
+    }
 }
