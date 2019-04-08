@@ -14,27 +14,28 @@ import android.widget.TimePicker;
 
 public class CalendarDisplay extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
     public String date="";
-    public int buttonNumber=0;
+    public boolean isStartTime=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar_display);
 
-        Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button endTimeButton = (Button) findViewById(R.id.endTimeButton);
+        endTimeButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                buttonNumber=1;
+                isStartTime = true;
                 DialogFragment timePicker = new TimePickerFragment();
                 timePicker.show(getSupportFragmentManager(), "time picker");
             }
         });
 
-        Button button2 = (Button) findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
+        Button startTimeButton = (Button) findViewById(R.id.startTimeButton);
+        startTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buttonNumber=2;
+                isStartTime = false;
                 DialogFragment timePicker = new TimePickerFragment();
                 timePicker.show(getSupportFragmentManager(), "time picker");
             }
@@ -74,15 +75,17 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
     }
 
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        if(buttonNumber==1) {
-            TextView textView = (TextView) findViewById(R.id.textView);
-            textView.setText("Hour: " + hourOfDay + " Minute: " + minute);
-        }else if(buttonNumber==2){
-            TextView textView = (TextView) findViewById(R.id.textView2);
-            textView.setText("Hour: " + hourOfDay + " Minute: " + minute);
-        }else{
-            TextView textView = (TextView) findViewById(R.id.textView);
-            textView.setText("Ummm that didn't work...");
+        if(isStartTime)
+        {
+
+            TextView endTimeDisplay = (TextView) findViewById(R.id.endTimeDisplay);
+            endTimeDisplay.setText(hourOfDay + ":" + minute);
         }
+        else
+        {
+            TextView startTimeDisplay = (TextView) findViewById(R.id.startTimeDisplay);
+            startTimeDisplay.setText(hourOfDay + ":" + minute);
+        }
+
     }
 }

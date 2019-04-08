@@ -8,23 +8,31 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#B5E8EC">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:paddingLeft="5sp"
+            android:paddingRight="5sp"
+            android:paddingTop="5sp" >
 
             <TextView
                 android:id="@+id/QuestionOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_question"
                 android:gravity="center"
+                android:paddingLeft="6sp"
+                android:paddingTop="10sp"
+                android:paddingRight="6sp"
+                android:paddingBottom="10sp"
                 android:text="@string/tutorQuestionOne"
-                android:textColor="@android:color/black"
-                android:textSize="30sp" />
-                <!--android:paddingTop="5pt"
-                android:paddingBottom="4pt"-->
+                android:textColor="#062C5B"
+                android:textSize="30sp"
+                app:fontFamily="sans-serif-light" />
 
             <CheckBox
                 android:id="@+id/Q1Answer1"
@@ -78,12 +86,17 @@
                 android:id="@+id/QuestionTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/bg_question"
                 android:gravity="center"
+                android:paddingLeft="6sp"
+                android:paddingTop="10sp"
+                android:paddingRight="6sp"
+                android:paddingBottom="10sp"
                 android:text="@string/tutorQuestionTwo"
-                android:textColor="@android:color/black"
-                android:textSize="30sp" />
-                <!--android:paddingTop="8pt"
-                android:paddingBottom="4pt"-->
+                android:textColor="#062C5B"
+                android:textSize="30sp"
+                app:fontFamily="sans-serif-light" />
 
             <CheckBox
                 android:id="@+id/Q2Answer1"
@@ -119,7 +132,12 @@
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/next" />
+                android:background="@drawable/bg_button"
+                android:text="@string/next"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="15sp"
+                tools:layout_editor_absoluteX="161dp"
+                tools:layout_editor_absoluteY="587dp" />
 
         </LinearLayout>
     </ScrollView>
