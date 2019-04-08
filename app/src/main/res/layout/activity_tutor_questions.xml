@@ -29,7 +29,7 @@
                 android:paddingTop="10sp"
                 android:paddingRight="6sp"
                 android:paddingBottom="10sp"
-                android:text="@string/stdntQuestionOne"
+                android:text="@string/tutorQuestionOne"
                 android:textColor="#062C5B"
                 android:textSize="30sp"
                 app:fontFamily="sans-serif-light" />
@@ -93,7 +93,7 @@
                 android:paddingTop="10sp"
                 android:paddingRight="6sp"
                 android:paddingBottom="10sp"
-                android:text="@string/stdntQuestionTwo"
+                android:text="@string/tutorQuestionTwo"
                 android:textColor="#062C5B"
                 android:textSize="30sp"
                 app:fontFamily="sans-serif-light" />
