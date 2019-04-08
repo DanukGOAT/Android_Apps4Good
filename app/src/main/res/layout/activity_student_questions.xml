@@ -23,6 +23,7 @@
                 android:id="@+id/questionOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
                 android:background="@drawable/bg_question"
                 android:gravity="center"
                 android:paddingLeft="6sp"
@@ -38,59 +39,76 @@
                 android:id="@+id/Q1answer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsOne" />
+                android:text="@string/questionOneAnsOne"
+                android:background="@drawable/bg_answer"
+                android:layout_marginTop="3dp" />
 
             <CheckBox
                 android:id="@+id/Q1answer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsTwo" />
+                android:text="@string/questionOneAnsTwo"
+                android:background="@drawable/bg_answer"
+                android:layout_marginTop="3dp" />
 
             <CheckBox
                 android:id="@+id/Q1answer3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsTre" />
+                android:text="@string/questionOneAnsTre"
+                android:background="@drawable/bg_answer"
+                android:layout_marginTop="3dp" />
 
             <CheckBox
                 android:id="@+id/Q1answer4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsFor" />
+                android:text="@string/questionOneAnsFor"
+                android:background="@drawable/bg_answer"
+                android:layout_marginTop="3dp" />
 
             <CheckBox
                 android:id="@+id/Q1answer5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsFiv" />
+                android:text="@string/questionOneAnsFiv"
+                android:background="@drawable/bg_answer"
+                android:layout_marginTop="3dp" />
 
             <CheckBox
                 android:id="@+id/Q1answer6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsSix" />
+                android:text="@string/questionOneAnsSix"
+                android:background="@drawable/bg_answer"
+                android:layout_marginTop="3dp" />
 
             <CheckBox
                 android:id="@+id/Q1answer7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsSvn" />
+                android:text="@string/questionOneAnsSvn"
+                android:background="@drawable/bg_answer"
+                android:layout_marginTop="3dp" />
 
             <CheckBox
                 android:id="@+id/Q1answer8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsAte" />
+                android:text="@string/questionOneAnsAte"
+                android:background="@drawable/bg_answer"
+                android:layout_marginTop="3dp" />
 
             <TextView
                 android:id="@+id/questionTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20sp"
+                android:layout_marginBottom="4dp"
                 android:background="@drawable/bg_question"
                 android:gravity="center"
                 android:paddingLeft="6sp"
-                android:paddingTop="10sp"
+                android:paddingTop="8sp"
                 android:paddingRight="6sp"
                 android:paddingBottom="10sp"
                 android:text="@string/stdntQuestionTwo"
@@ -102,31 +120,41 @@
                 android:id="@+id/q2Answer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionTwoAnsOne" />
+                android:text="@string/questionTwoAnsOne"
+                android:background="@drawable/bg_answer"
+                android:layout_marginTop="3dp"/>
 
             <CheckBox
                 android:id="@+id/q2Answer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionTwoAnsTwo" />
+                android:text="@string/questionTwoAnsTwo"
+                android:background="@drawable/bg_answer"
+                android:layout_marginTop="3dp" />
 
             <CheckBox
                 android:id="@+id/q2Answer3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionTwoAnsTre" />
+                android:text="@string/questionTwoAnsTre"
+                android:background="@drawable/bg_answer"
+                android:layout_marginTop="3dp" />
 
             <CheckBox
                 android:id="@+id/q2Answer4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionTwoAnsFor" />
+                android:text="@string/questionTwoAnsFor"
+                android:background="@drawable/bg_answer"
+                android:layout_marginTop="3dp" />
 
             <CheckBox
                 android:id="@+id/q2Answer5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionTwoAnsFiv" />
+                android:text="@string/questionTwoAnsFiv"
+                android:background="@drawable/bg_answer"
+                android:layout_marginTop="3dp" />
 
             <Button
                 android:id="@+id/finishButton"
