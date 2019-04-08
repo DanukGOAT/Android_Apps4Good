@@ -78,13 +78,13 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         if(isStartTime)
         {
 
-            TextView endTimeDisplay = (TextView) findViewById(R.id.endTimeDisplay);
-            endTimeDisplay.setText(hourOfDay + ":" + minute);
+            Button startTimeButton = (Button) findViewById(R.id.endTimeButton);
+            startTimeButton.setText(hourOfDay + ":" + minute);
         }
         else
         {
-            TextView startTimeDisplay = (TextView) findViewById(R.id.startTimeDisplay);
-            startTimeDisplay.setText(hourOfDay + ":" + minute);
+            Button endTimeButton = (Button) findViewById(R.id.startTimeButton);
+            endTimeButton.setText(hourOfDay + ":" + minute);
         }
 
     }
