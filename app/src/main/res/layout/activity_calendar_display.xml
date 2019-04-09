@@ -87,6 +87,7 @@
                 android:text="@string/finishedButtonText"
                 tools:layout_editor_absoluteX="30dp"
                 tools:layout_editor_absoluteY="450dp" />
+
             <!--android:maxDate="10/22/2001"
                 android:minDate="10/22/2019"-->
         </LinearLayout>
