@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:background="@drawable/bg_bigtext"
+    android:gravity="center"
+    android:paddingLeft="6sp"
+    android:paddingTop="10sp"
+    android:paddingRight="6sp"
+    android:paddingBottom="10sp"
+    android:textColor="#062C5B"
+    android:textSize="30sp"
+    android:text="test" >
+
+</android.support.constraint.TextView>
