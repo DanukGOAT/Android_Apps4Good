@@ -88,11 +88,6 @@
                 tools:layout_editor_absoluteX="30dp"
                 tools:layout_editor_absoluteY="450dp" />
 
-            <Button
-                android:id="@+id/debugButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/debugButtonText" />
             <!--android:maxDate="10/22/2001"
                 android:minDate="10/22/2019"-->
         </LinearLayout>

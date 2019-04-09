@@ -68,20 +68,12 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         addTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tutor.addTime(date + "*" + time);
+                //tutor.addTime(date + "*" + time);
                 Intent intent = new Intent(CalendarDisplay.this, CalendarDisplay.class);
                 intent.putExtra("Personal Contact Information", date);
                 startActivity(intent);
             }
         });
-//        Button debugButton = findViewById(R.id.debugButton);
-//        debugButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Button debugButton = (Button) findViewById(R.id.debugButton);
-//                debugButton.setText(tutor.getTimes().get(0));
-//            }
-//        });
 
     }
 

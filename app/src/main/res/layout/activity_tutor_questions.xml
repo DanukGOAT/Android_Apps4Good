@@ -157,13 +157,14 @@
                 android:layout_marginTop="3dp"  />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/tutorNextButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
                 android:background="@drawable/bg_button"
+                android:onClick="tutorNextButtonPress"
                 android:text="@string/next"
                 android:textColor="@android:color/white"
-                android:layout_marginTop="15sp"
                 tools:layout_editor_absoluteX="161dp"
                 tools:layout_editor_absoluteY="587dp" />
 
