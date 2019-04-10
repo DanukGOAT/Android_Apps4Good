@@ -30,9 +30,9 @@
             android:paddingTop="10sp"
             android:paddingRight="6sp"
             android:paddingBottom="10sp"
-            android:text="Welcome back message?"
+            android:text="@string/welcome"
             android:textColor="#062C5B"
-            android:textSize="30sp"
+            android:textSize="36sp"
             app:fontFamily="sans-serif-light" />
 
         <TextView
@@ -51,6 +51,49 @@
             android:textColor="#062C5B"
             android:textSize="24sp"
             app:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/NewApps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_medtext"
+            android:gravity="center"
+            android:paddingLeft="6sp"
+            android:paddingTop="10sp"
+            android:paddingRight="6sp"
+            android:paddingBottom="10sp"
+            android:layout_marginTop="50sp"
+            android:text="@string/tutorNewTimes"
+            android:textColor="#062C5B"
+            android:textSize="22sp"
+            app:fontFamily="sans-serif-medium"  />
+
+        <TextView
+            android:id="@+id/ComingApps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_medtext"
+            android:gravity="center"
+            android:paddingLeft="6sp"
+            android:paddingTop="10sp"
+            android:paddingRight="6sp"
+            android:paddingBottom="10sp"
+            android:layout_marginTop="50sp"
+            android:text="@string/tutorUpcomingTimes"
+            android:textColor="#062C5B"
+            android:textSize="20sp"
+            app:fontFamily="sans-serif-medium"  />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tutorSchedule"
+            android:background="@drawable/bg_button"
+            android:layout_marginTop="20dp"
+            android:textColor="#FFFFFF"/>
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

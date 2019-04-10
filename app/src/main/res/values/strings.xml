@@ -38,5 +38,9 @@
     <string name="endTimeButtonText">End Time</string>
     <string name="addTimeButtonText">Add Time</string>
     <string name="finishedButtonText">Finished</string>
-    <string name="tutorNextTime">Your next tutoring session is: time here (this text can be edited)</string>
+    <string name="tutorNextTime">Your next tutoring session is: \n {student name} at {time} on {date} at {place}</string>
+    <string name="tutorSchedule">Click to view full calendar</string>
+    <string name="tutorNewTimes">New appointments: \n {student name} at {time} on {date} \n {student name} at {time} on {date} \n etc...</string>
+    <string name="tutorUpcomingTimes">Upcoming appointments: \n {student name} at {time} on {date} \n {student name} at {time} on {date} \n etc...</string>
+    <string name="welcome">Well come back!!!!!!!</string>
 </resources>
