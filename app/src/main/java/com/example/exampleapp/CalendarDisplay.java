@@ -57,7 +57,6 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot child: dataSnapshot.getChildren()){
-
                     Log.d(TAG, child.getValue(Tutor.class).toString());
                 }
             }
