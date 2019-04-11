@@ -33,6 +33,8 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
     public String date="";
     public String time="";
     public boolean isStartTime=false;
+    public Tutor tutor =  new Tutor();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,27 +115,31 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         addTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tutor tutor =  new Tutor();
-                tutor.addTime(date + "**" + time);
+                //tutor.addTime(date + "*" + time);
                 Intent intent = new Intent(CalendarDisplay.this, CalendarDisplay.class);
                 intent.putExtra("Personal Contact Information", date);
                 startActivity(intent);
             }
         });
 
-
     }
 
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         if(isStartTime)
         {
-            time = hourOfDay + ":" + minute;
+            if(minute < 10)
+                time = hourOfDay + ":0" + minute;
+            else
+                time = hourOfDay + ":" + minute;
             Button startTimeButton = (Button) findViewById(R.id.endTimeButton);
             startTimeButton.setText(time);
         }
         else
         {
-            time = hourOfDay + ":" + minute;
+            if(minute < 10)
+                time = hourOfDay + ":0" + minute;
+            else
+                time = hourOfDay + ":" + minute;
             Button endTimeButton = (Button) findViewById(R.id.startTimeButton);
             endTimeButton.setText(time);
         }
@@ -142,3 +148,4 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
 
 
 }
+//
