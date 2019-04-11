@@ -6,13 +6,30 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.DialogFragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+
 public class CalendarDisplay extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
+    private DatabaseReference myRef;
+    private FirebaseDatabase database;
+
+    private static final String TAG="AviIsMyFather";
+
+    private String name;
+
     public String date="";
     public String time="";
     public boolean isStartTime=false;
@@ -20,6 +37,37 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar_display);
+
+        ArrayList<String> arrs = new ArrayList<String>();
+
+        arrs.add("Sup Daniel");
+
+        Tutor Avi = new Tutor(arrs, "Avi");
+//        Avi.setName("Avi");
+        Avi.addTime("timeThingy");
+        Avi.addTime("timeThingy2");
+        Avi.addTime("timeThingy3");
+
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("Users");
+//        myRef.setValue("defaultUser");
+        myRef.child("defaultUser").setValue(Avi);
+
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot child: dataSnapshot.getChildren()){
+
+                    Log.d(TAG, child.getValue(Tutor.class).toString());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.w(TAG, "Failed to read value.", databaseError.toException());
+            }
+        });
+
 
         Button endTimeButton = (Button) findViewById(R.id.endTimeButton);
         endTimeButton.setOnClickListener(new View.OnClickListener() {
