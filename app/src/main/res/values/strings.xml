@@ -46,4 +46,13 @@
     <string name="plugForMAMSText">Insert link to MAMS website here</string>
     <string name="personalContactInfoText">Insert phone number or email here</string>
     <string name="editButtonText">Finish</string>
+    <string name="welcome">Well come back!!!!</string>
+    <string name="studentNextTime">Your next appointment is at \n {time} on {date} with {tutor name}</string>
+    <string name="studentUpcomingTimes">Upcoming appointments: \n {time} on {date} with {tutor name}\n {time} on {date} with {tutor name}</string>
+    <string name="scheduleSession">Schedule a new tutoring session</string>
+    <string name="cancelSession">Cancel a tutoring session</string>
+    <string name="tutorSchedule">View full calendar</string>
+    <string name="tutorNextTime">Your next appointment is: \n{student name} at {time} on {date} at {place}</string>
+    <string name="tutorNewTimes">New appointments:\n {student name} at {time} on {date}\n {student name} at {time} on {date}</string>
+    <string name="tutorUpcomingTimes">Upcoming appointments:\n {student name} at {time} on {date}\n {student name} at {time} on {date}</string>
 </resources>
