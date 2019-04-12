@@ -9,17 +9,38 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#B5E8EC"
+        android:paddingLeft="5sp"
+        android:paddingRight="5sp"
+        android:paddingTop="5sp">
+
+        <TextView
+            android:id="@+id/Welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_bigtext"
+            android:gravity="center"
+            android:paddingLeft="6sp"
+            android:paddingTop="10sp"
+            android:paddingRight="6sp"
+            android:paddingBottom="10sp"
+            android:text="Profile Info"
+            android:textColor="#062C5B"
+            android:textSize="36sp"
+            app:fontFamily="sans-serif-light" />
 
         <EditText
             android:id="@+id/UserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:gravity="center"
             android:inputType="textPersonName"
-            android:text="INSERT NAME HERE"
-            android:textSize="30sp" />
+            android:text="Insert name here"
+            android:background="@drawable/bg_answer"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"/>
 
         <EditText
             android:id="@+id/personalBlurb"
@@ -27,7 +48,11 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:text="Insert personal blurb here" />
+            android:text="Insert personal blurb here"
+            android:background="@drawable/bg_answer"
+
+            android:padding="5dp"
+            android:layout_marginTop="5dp"/>
 
         <EditText
             android:id="@+id/tutorExperience"
@@ -35,7 +60,11 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:text="Insert Number of times that you have tutored" />
+            android:text="Insert Number of times that you have tutored"
+            android:background="@drawable/bg_answer"
+
+            android:padding="5dp"
+            android:layout_marginTop="5dp"/>
 
         <EditText
             android:id="@+id/subjects"
@@ -43,7 +72,11 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:text="Insert teachable subjects" />
+            android:text="Insert teachable subjects"
+            android:background="@drawable/bg_answer"
+
+            android:padding="5dp"
+            android:layout_marginTop="5dp"/>
 
         <EditText
             android:id="@+id/Where"
@@ -51,7 +84,10 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:text="Insert where you can work" />
+            android:text="Insert where you can work"
+            android:background="@drawable/bg_answer"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"/>
 
         <EditText
             android:id="@+id/PlugforMAMS"
@@ -59,20 +95,27 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:text="link to MAMS website" />
+            android:text="link to MAMS website"
+            android:background="@drawable/bg_answer"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"/>
 
         <Button
             android:id="@+id/editButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Finish" />
+            android:text="Finish"
+            android:background="@drawable/bg_button"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"/>
 
         <TextView
             android:id="@+id/personalContactInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Personal Contact Information"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"/>
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
