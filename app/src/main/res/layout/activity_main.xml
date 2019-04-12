@@ -50,7 +50,6 @@
             android:id="@+id/debugButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="debugButtonPress"
             android:text="@string/debugButtonText" />
 
     </LinearLayout>

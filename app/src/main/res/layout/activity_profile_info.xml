@@ -32,7 +32,7 @@
             app:fontFamily="sans-serif-light" />
 
         <EditText
-            android:id="@+id/UserName"
+            android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -41,6 +41,9 @@
             android:background="@drawable/bg_answer"
             android:padding="5dp"
             android:layout_marginTop="5dp"/>
+            android:text="@string/userNameText"
+            android:textSize="30sp" />
+
 
         <EditText
             android:id="@+id/personalBlurb"
@@ -48,6 +51,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
+            android:text="@string/personalBlurbText" />
+            //android:importantForAutofill="no" />
             android:text="Insert personal blurb here"
             android:background="@drawable/bg_answer"
 
@@ -65,6 +70,8 @@
 
             android:padding="5dp"
             android:layout_marginTop="5dp"/>
+            android:text="@string/tutorExperienceText" />
+            //android:importantForAutofill="no"/>
 
         <EditText
             android:id="@+id/subjects"
@@ -72,6 +79,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
+            android:text="@string/subjectsText" />
+            //android:importantForAutofill="no"/>
             android:text="Insert teachable subjects"
             android:background="@drawable/bg_answer"
 
@@ -79,22 +88,35 @@
             android:layout_marginTop="5dp"/>
 
         <EditText
-            android:id="@+id/Where"
+            android:id="@+id/where"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
+            android:text="@string/whereText" />
+            //android:importantForAutofill="no"/>
             android:text="Insert where you can work"
             android:background="@drawable/bg_answer"
             android:padding="5dp"
             android:layout_marginTop="5dp"/>
 
         <EditText
-            android:id="@+id/PlugforMAMS"
+            android:id="@+id/plugForMAMS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
+            android:text="@string/plugForMAMSText" />
+            //android:importantForAutofill="no"/>
+
+        <EditText
+            android:id="@+id/personalContactInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/personalContactInfoText" />
+            //android:autofillHints="AUTOFILL_HINT_PHONE"/>
             android:text="link to MAMS website"
             android:background="@drawable/bg_answer"
             android:padding="5dp"
@@ -116,6 +138,7 @@
             android:text="Personal Contact Information"
             android:textSize="24sp"
             android:layout_marginTop="10dp"/>
+            android:text="@string/editButtonText" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
