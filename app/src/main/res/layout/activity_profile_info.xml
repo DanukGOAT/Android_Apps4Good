@@ -9,11 +9,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="#B5E8EC"
+        android:orientation="vertical"
         android:paddingLeft="5sp"
-        android:paddingRight="5sp"
-        android:paddingTop="5sp">
+        android:paddingTop="5sp"
+        android:paddingRight="5sp">
 
         <TextView
             android:id="@+id/Welcome"
@@ -35,93 +35,93 @@
             android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
             android:ems="10"
             android:inputType="textPersonName"
-            android:background="@drawable/bg_answer"
             android:padding="5dp"
-            android:layout_marginTop="5dp"
             android:text="@string/userNameText" />
 
         <EditText
             android:id="@+id/personalBlurb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:text="@string/personalBlurbText"
-            android:importantForAutofill="no"
+            android:layout_marginTop="10dp"
             android:background="@drawable/bg_answer"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
             android:padding="5dp"
-            android:layout_marginTop="5dp"/>
+            android:text="@string/personalBlurbText" />
 
         <EditText
             android:id="@+id/tutorExperience"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textMultiLine"
+            android:layout_marginTop="10dp"
             android:background="@drawable/bg_answer"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
             android:padding="5dp"
-            android:layout_marginTop="5dp"
-            android:text="@string/tutorExperienceText"
-            android:importantForAutofill="no"/>
+            android:text="@string/tutorExperienceText" />
 
         <EditText
             android:id="@+id/subjects"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:importantForAutofill="no"
-            android:text="Insert teachable subjects"
+            android:layout_marginTop="10dp"
             android:background="@drawable/bg_answer"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
             android:padding="5dp"
-            android:layout_marginTop="5dp"/>
+            android:text="Insert teachable subjects" />
 
         <EditText
             android:id="@+id/where"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:text="@string/whereText"
-            android:importantForAutofill="no"
+            android:layout_marginTop="10dp"
             android:background="@drawable/bg_answer"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
             android:padding="5dp"
-            android:layout_marginTop="5dp"/>
+            android:text="@string/whereText" />
 
         <EditText
             android:id="@+id/plugForMAMS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
             android:ems="10"
+            android:importantForAutofill="no"
             android:inputType="textMultiLine"
             android:padding="5dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/bg_answer"
-            android:text="@string/plugForMAMSText"
-            android:importantForAutofill="no"/>
+            android:text="@string/plugForMAMSText" />
 
         <EditText
             android:id="@+id/contactInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/personalContactInfoText"
+            android:layout_marginTop="10dp"
             android:autofillHints="AUTOFILL_HINT_PHONE"
             android:background="@drawable/bg_answer"
+            android:ems="10"
+            android:inputType="textPersonName"
             android:padding="5dp"
-            android:layout_marginTop="5dp"/>
+            android:text="@string/personalContactInfoText" />
 
         <Button
             android:id="@+id/editButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Finish"
+            android:layout_marginTop="10dp"
             android:background="@drawable/bg_button"
-            android:textColor="#FFFFFF"
-            android:layout_marginTop="10dp"/>
+            android:text="Finish"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
