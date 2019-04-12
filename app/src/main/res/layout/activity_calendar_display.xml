@@ -9,7 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
@@ -43,6 +43,8 @@
                 android:id="@+id/weeklyCheckBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:checked="false"
+                android:clickable="false"
                 android:text="@string/weeklyCheckBoxText" />
 
             <LinearLayout
@@ -68,7 +70,6 @@
                     android:id="@+id/endTimeButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
                     android:layout_weight="1"
                     android:text="@string/endTimeButtonText" />
 

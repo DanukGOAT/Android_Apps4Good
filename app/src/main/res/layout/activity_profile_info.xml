@@ -12,14 +12,15 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/UserName"
+            android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="center"
             android:inputType="textPersonName"
-            android:text="INSERT NAME HERE"
+            android:text="@string/userNameText"
             android:textSize="30sp" />
+
 
         <EditText
             android:id="@+id/personalBlurb"
@@ -27,7 +28,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:text="Insert personal blurb here" />
+            android:text="@string/personalBlurbText" />
+            //android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/tutorExperience"
@@ -35,7 +37,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:text="Insert Number of times that you have tutored" />
+            android:text="@string/tutorExperienceText" />
+            //android:importantForAutofill="no"/>
 
         <EditText
             android:id="@+id/subjects"
@@ -43,36 +46,41 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:text="Insert teachable subjects" />
+            android:text="@string/subjectsText" />
+            //android:importantForAutofill="no"/>
 
         <EditText
-            android:id="@+id/Where"
+            android:id="@+id/where"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:text="Insert where you can work" />
+            android:text="@string/whereText" />
+            //android:importantForAutofill="no"/>
 
         <EditText
-            android:id="@+id/PlugforMAMS"
+            android:id="@+id/plugForMAMS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:text="link to MAMS website" />
+            android:text="@string/plugForMAMSText" />
+            //android:importantForAutofill="no"/>
+
+        <EditText
+            android:id="@+id/personalContactInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/personalContactInfoText" />
+            //android:autofillHints="AUTOFILL_HINT_PHONE"/>
 
         <Button
             android:id="@+id/editButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Finish" />
-
-        <TextView
-            android:id="@+id/personalContactInfo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Personal Contact Information"
-            android:textSize="24sp" />
+            android:text="@string/editButtonText" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
