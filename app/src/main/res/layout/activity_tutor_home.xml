@@ -46,7 +46,7 @@
             android:paddingTop="10sp"
             android:paddingRight="6sp"
             android:paddingBottom="10sp"
-            android:layout_marginTop="30sp"
+            android:layout_marginTop="35sp"
             android:text="@string/tutorNextTime"
             android:textColor="#062C5B"
             android:textSize="24sp"
@@ -63,7 +63,7 @@
             android:paddingTop="10sp"
             android:paddingRight="6sp"
             android:paddingBottom="10sp"
-            android:layout_marginTop="50sp"
+            android:layout_marginTop="35sp"
             android:text="@string/tutorNewTimes"
             android:textColor="#062C5B"
             android:textSize="22sp"
@@ -80,7 +80,7 @@
             android:paddingTop="10sp"
             android:paddingRight="6sp"
             android:paddingBottom="10sp"
-            android:layout_marginTop="50sp"
+            android:layout_marginTop="35sp"
             android:text="@string/tutorUpcomingTimes"
             android:textColor="#062C5B"
             android:textSize="20sp"
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:text="@string/tutorSchedule"
             android:background="@drawable/bg_button"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="35dp"
             android:textColor="#FFFFFF"/>
 
     </LinearLayout>
