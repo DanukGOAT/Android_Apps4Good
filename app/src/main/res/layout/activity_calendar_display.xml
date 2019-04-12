@@ -8,20 +8,24 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="900dp"
+            android:background="#B5E8EC"
+            android:orientation="vertical"
+            android:paddingLeft="5sp"
+            android:paddingTop="5sp"
+            android:paddingRight="5sp">
 
             <TextView
                 android:id="@+id/calendarCaption"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_medtext"
                 android:gravity="center"
+                android:padding="7sp"
                 android:text="@string/calendarCaptionText"
                 android:textColor="@android:color/black"
                 android:textSize="19sp" />
@@ -45,12 +49,14 @@
                 android:layout_height="wrap_content"
                 android:checked="false"
                 android:clickable="false"
-                android:text="@string/weeklyCheckBoxText" />
+                android:text="@string/weeklyCheckBoxText"
+                android:background="@drawable/bg_answer"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
 
                 <Button
                     android:id="@+id/startTimeButton"
@@ -79,13 +85,19 @@
                 android:id="@+id/addTimeButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/addTimeButtonText" />
+                android:layout_marginTop="10sp"
+                android:background="@drawable/bg_button"
+                android:text="@string/addTimeButtonText"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/finishedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/bg_button"
                 android:text="@string/finishedButtonText"
+                android:textColor="#FFFFFF"
                 tools:layout_editor_absoluteX="30dp"
                 tools:layout_editor_absoluteY="450dp" />
 
