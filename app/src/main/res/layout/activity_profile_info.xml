@@ -9,70 +9,119 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="#B5E8EC"
+        android:orientation="vertical"
+        android:paddingLeft="5sp"
+        android:paddingTop="5sp"
+        android:paddingRight="5sp">
 
-        <EditText
-            android:id="@+id/UserName"
+        <TextView
+            android:id="@+id/Welcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_bigtext"
             android:gravity="center"
+            android:paddingLeft="6sp"
+            android:paddingTop="10sp"
+            android:paddingRight="6sp"
+            android:paddingBottom="10sp"
+            android:text="Profile Info"
+            android:textColor="#062C5B"
+            android:textSize="36sp"
+            app:fontFamily="sans-serif-light" />
+
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
+            android:ems="10"
             android:inputType="textPersonName"
-            android:text="INSERT NAME HERE"
-            android:textSize="30sp" />
+            android:padding="5dp"
+            android:text="@string/userNameText" />
 
         <EditText
             android:id="@+id/personalBlurb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
             android:ems="10"
+            android:importantForAutofill="no"
             android:inputType="textMultiLine"
-            android:text="Insert personal blurb here" />
+            android:padding="5dp"
+            android:text="@string/personalBlurbText" />
 
         <EditText
             android:id="@+id/tutorExperience"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
             android:ems="10"
+            android:importantForAutofill="no"
             android:inputType="textMultiLine"
-            android:text="Insert Number of times that you have tutored" />
+            android:padding="5dp"
+            android:text="@string/tutorExperienceText" />
 
         <EditText
             android:id="@+id/subjects"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
             android:ems="10"
+            android:importantForAutofill="no"
             android:inputType="textMultiLine"
+            android:padding="5dp"
             android:text="Insert teachable subjects" />
 
         <EditText
-            android:id="@+id/Where"
+            android:id="@+id/where"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
             android:ems="10"
+            android:importantForAutofill="no"
             android:inputType="textMultiLine"
-            android:text="Insert where you can work" />
+            android:padding="5dp"
+            android:text="@string/whereText" />
 
         <EditText
-            android:id="@+id/PlugforMAMS"
+            android:id="@+id/plugForMAMS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
             android:ems="10"
+            android:importantForAutofill="no"
             android:inputType="textMultiLine"
-            android:text="link to MAMS website" />
+            android:padding="5dp"
+            android:text="@string/plugForMAMSText" />
+
+        <EditText
+            android:id="@+id/contactInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:autofillHints="AUTOFILL_HINT_PHONE"
+            android:background="@drawable/bg_answer"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:text="@string/personalContactInfoText" />
 
         <Button
             android:id="@+id/editButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Finish" />
-
-        <TextView
-            android:id="@+id/personalContactInfo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Personal Contact Information"
-            android:textSize="24sp" />
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button"
+            android:text="Finish"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
