@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
+        android:background="#B5E8EC"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="0dp">
@@ -20,8 +21,14 @@
             android:id="@+id/initQuestion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/bg_bigtext"
+            android:gravity="center"
+            android:paddingLeft="6sp"
+            android:paddingTop="10sp"
+            android:paddingRight="6sp"
+            android:paddingBottom="10sp"
             android:text="@string/initQuestionText"
-            android:textSize="30sp" />
+            android:textSize="40sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,17 +39,21 @@
                 android:id="@+id/studentButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button"
                 android:onClick="studentButtonPress"
                 android:text="@string/studentButtonText"
-                android:layout_weight="1"/>
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/tutorButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button"
                 android:onClick="tutorButtonPress"
                 android:text="@string/tutorButtonText"
-                android:layout_weight="1"/>
+                android:textColor="#FFFFFF" />
 
         </LinearLayout>
 
@@ -50,7 +61,9 @@
             android:id="@+id/debugButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/debugButtonText" />
+            android:background="@drawable/bg_button"
+            android:text="@string/debugButtonText"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 
