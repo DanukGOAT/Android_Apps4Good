@@ -14,7 +14,7 @@ public class ProfileInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_info);
 
-        TextView txtview = findViewById(R.id.personalContactInfo);
+        TextView txtview = findViewById(R.id.contactInfo);
         Button editBut = findViewById(R.id.editButton);
 
 
