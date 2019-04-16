@@ -73,7 +73,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/startTimeButtonText" />
+                android:background="@drawable/bg_button"
+                android:text="@string/startTimeButtonText"
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/toText"
@@ -87,7 +89,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/endTimeButtonText" />
+                android:background="@drawable/bg_button"
+                android:text="@string/endTimeButtonText"
+                android:textColor="#FFFFFF" />
 
         </LinearLayout>
 
