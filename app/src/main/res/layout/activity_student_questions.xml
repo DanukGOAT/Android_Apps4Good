@@ -8,16 +8,16 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#B5E8EC"
             android:orientation="vertical"
             android:paddingLeft="5sp"
-            android:paddingRight="5sp"
             android:paddingTop="5sp"
-            android:background="#B5E8EC" >
+            android:paddingRight="5sp">
 
             <TextView
                 android:id="@+id/questionOne"
@@ -39,65 +39,65 @@
                 android:id="@+id/Q1answer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsOne"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/bg_answer"
-                android:layout_marginTop="3dp" />
+                android:text="@string/questionOneAnsOne" />
 
             <CheckBox
                 android:id="@+id/Q1answer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsTwo"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/bg_answer"
-                android:layout_marginTop="3dp" />
+                android:text="@string/questionOneAnsTwo" />
 
             <CheckBox
                 android:id="@+id/Q1answer3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsTre"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/bg_answer"
-                android:layout_marginTop="3dp" />
+                android:text="@string/questionOneAnsTre" />
 
             <CheckBox
                 android:id="@+id/Q1answer4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsFor"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/bg_answer"
-                android:layout_marginTop="3dp" />
+                android:text="@string/questionOneAnsFor" />
 
             <CheckBox
                 android:id="@+id/Q1answer5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsFiv"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/bg_answer"
-                android:layout_marginTop="3dp" />
+                android:text="@string/questionOneAnsFiv" />
 
             <CheckBox
                 android:id="@+id/Q1answer6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsSix"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/bg_answer"
-                android:layout_marginTop="3dp" />
+                android:text="@string/questionOneAnsSix" />
 
             <CheckBox
                 android:id="@+id/Q1answer7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsSvn"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/bg_answer"
-                android:layout_marginTop="3dp" />
+                android:text="@string/questionOneAnsSvn" />
 
             <CheckBox
                 android:id="@+id/Q1answer8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionOneAnsAte"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/bg_answer"
-                android:layout_marginTop="3dp" />
+                android:text="@string/questionOneAnsAte" />
 
             <TextView
                 android:id="@+id/questionTwo"
@@ -120,50 +120,50 @@
                 android:id="@+id/q2Answer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionTwoAnsOne"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/bg_answer"
-                android:layout_marginTop="3dp"/>
+                android:text="@string/questionTwoAnsOne" />
 
             <CheckBox
                 android:id="@+id/q2Answer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionTwoAnsTwo"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/bg_answer"
-                android:layout_marginTop="3dp" />
+                android:text="@string/questionTwoAnsTwo" />
 
             <CheckBox
                 android:id="@+id/q2Answer3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionTwoAnsTre"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/bg_answer"
-                android:layout_marginTop="3dp" />
+                android:text="@string/questionTwoAnsTre" />
 
             <CheckBox
                 android:id="@+id/q2Answer4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionTwoAnsFor"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/bg_answer"
-                android:layout_marginTop="3dp" />
+                android:text="@string/questionTwoAnsFor" />
 
             <CheckBox
                 android:id="@+id/q2Answer5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/questionTwoAnsFiv"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/bg_answer"
-                android:layout_marginTop="3dp" />
+                android:text="@string/questionTwoAnsFiv" />
 
             <Button
                 android:id="@+id/finishButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
                 android:background="@drawable/bg_button"
                 android:text="@string/next"
                 android:textColor="@android:color/white"
-                android:layout_marginTop="15sp"
                 tools:layout_editor_absoluteX="161dp"
                 tools:layout_editor_absoluteY="587dp" />
         </LinearLayout>
