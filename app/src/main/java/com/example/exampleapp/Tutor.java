@@ -7,9 +7,29 @@ public class Tutor {
     private ArrayList<String> times;
 //    private String times;
     private static int userNum=1;
+    private ArrayList<String> subjects;
+    private ArrayList<String> preferences;
+
+    public ArrayList<String> getSubjects() {
+        return subjects;
+    }
+
+    public void setSubjects(ArrayList<String> subjects) {
+        this.subjects = subjects;
+    }
+
+    public ArrayList<String> getPreferences() {
+        return preferences;
+    }
+
+    public void setPreferences(ArrayList<String> preferences) {
+        this.preferences = preferences;
+    }
 
     public Tutor(){
         times = new ArrayList<String>();
+        subjects = new ArrayList<String>();
+        preferences  = new ArrayList<String>();
         name = ""+userNum;
         userNum++;
     }
