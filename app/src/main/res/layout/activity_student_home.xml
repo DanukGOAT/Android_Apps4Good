@@ -76,7 +76,8 @@
             android:text="@string/scheduleSession"
             android:background="@drawable/bg_button"
             android:layout_marginTop="30dp"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"/>
 
         <Button
             android:id="@+id/cancelbutton"
@@ -85,7 +86,8 @@
             android:text="@string/cancelSession"
             android:background="@drawable/bg_button"
             android:layout_marginTop="30dp"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"/>
 
         <Button
             android:id="@+id/calendar"
@@ -94,7 +96,8 @@
             android:text="@string/tutorSchedule"
             android:background="@drawable/bg_button"
             android:layout_marginTop="30dp"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"/>
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
