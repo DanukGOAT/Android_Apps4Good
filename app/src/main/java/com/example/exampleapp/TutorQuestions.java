@@ -14,6 +14,7 @@ public class TutorQuestions extends AppCompatActivity {
     ArrayList<Integer> subjects = new ArrayList<Integer>();
     ArrayList<Integer> preferences = new ArrayList<Integer>();
     private Tutor tutor = new Tutor();
+    private static final String TAG="Test123";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +33,12 @@ public class TutorQuestions extends AppCompatActivity {
         ja.add((CheckBox) findViewById(R.id.Q1Answer7));
         ja.add((CheckBox) findViewById(R.id.Q1Answer8));
 
-        for (int i = 0; i < ja.size(); i++)
-            if (ja.get(i).isChecked())
+        for (int i = 0; i < ja.size(); i++) {
+            if (ja.get(i).isChecked()) {
+//                Log.w(TAG, "did it work now?");
                 subjects.add(i);
+            }
+        }
 
         ja.clear();
         ja.add((CheckBox) findViewById(R.id.Q2Answer1));
@@ -57,9 +61,11 @@ public class TutorQuestions extends AppCompatActivity {
     }
 
     public void tutorNextButtonPress(View v){
+        addInfo();
         tutor.setPreferences(preferencesOfTutor());
         tutor.setSubjects(subjectsToTutor());
-        Log.w("Preferences", "");
+        Log.w(TAG, tutor.toString());
+//        Log.w(TAG, "did it work?");
         Intent intent = new Intent(this, CalendarDisplay.class);
         startActivity(intent);
     }
