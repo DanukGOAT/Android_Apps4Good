@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".CalendarDisplay">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -99,7 +102,7 @@
             android:id="@+id/addTimeButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
+            android:layout_marginTop="12sp"
             android:background="@drawable/bg_button"
             android:text="@string/addTimeButtonText"
             android:textColor="#FFFFFF" />
@@ -108,7 +111,7 @@
             android:id="@+id/finishedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
+            android:layout_marginTop="12sp"
             android:background="@drawable/bg_button"
             android:text="@string/finishedButtonText"
             android:textColor="#FFFFFF"
@@ -118,4 +121,5 @@
         <!--android:maxDate="10/22/2001"
             android:minDate="10/22/2019"-->
     </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
