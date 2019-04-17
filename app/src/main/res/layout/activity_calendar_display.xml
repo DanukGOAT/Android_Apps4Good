@@ -44,13 +44,14 @@
                 android:textColor="@android:color/black"
                 android:textSize="19sp" />
 
-        <CheckBox
-            android:id="@+id/weeklyCheckBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_answer"
-            android:checked="false"
-            android:text="@string/weeklyCheckBoxText" />
+            <CheckBox
+                android:id="@+id/weeklyCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_answer"
+                android:checked="false"
+                android:layout_marginTop="10dp"
+                android:text="@string/weeklyCheckBoxText" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -58,15 +59,15 @@
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/startTimeButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="6sp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_button"
-                android:text="@string/startTimeButtonText"
-                android:textColor="#FFFFFF" />
+                <Button
+                    android:id="@+id/startTimeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:text="@string/startTimeButtonText"
+                    android:textColor="#FFFFFF" />
 
 
                 <TextView
@@ -77,15 +78,15 @@
                     android:textSize="24sp" />
 
 
-            <Button
-                android:id="@+id/endTimeButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="6sp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_button"
-                android:text="@string/endTimeButtonText"
-                android:textColor="#FFFFFF" />
+                <Button
+                    android:id="@+id/endTimeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:text="@string/endTimeButtonText"
+                    android:textColor="#FFFFFF" />
 
             </LinearLayout>
 
@@ -109,20 +110,21 @@
                 tools:layout_editor_absoluteX="30dp"
                 tools:layout_editor_absoluteY="450dp" />
 
-        <CalendarView
-            android:id="@+id/Calendarr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <CalendarView
+                android:id="@+id/Calendarr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         <!--android:maxDate="10/22/2001"
             android:minDate="10/22/2019"-->
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
