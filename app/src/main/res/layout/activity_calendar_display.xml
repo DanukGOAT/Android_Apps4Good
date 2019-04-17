@@ -9,117 +9,118 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#B5E8EC"
-        android:orientation="vertical"
-        android:paddingLeft="5sp"
-        android:paddingTop="5sp"
-        android:paddingRight="5sp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="6sp"
-            android:background="@drawable/bg_bigtext"
-            android:gravity="center"
-            android:paddingLeft="6sp"
-            android:paddingTop="10sp"
-            android:paddingRight="6sp"
-            android:paddingBottom="10sp"
-            android:text="@string/calendarTitle"
-            android:textSize="40sp"
-            app:fontFamily="sans-serif-light" />
-
-        <TextView
-            android:id="@+id/calendarCaption"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_medtext"
-            android:gravity="center"
-            android:padding="7sp"
-            android:text="@string/calendarCaptionText"
-            android:textColor="@android:color/black"
-            android:textSize="19sp" />
-
-        <CalendarView
-            android:id="@+id/Calendarr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <CheckBox
-            android:id="@+id/weeklyCheckBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_answer"
-            android:checked="false"
-            android:clickable="false"
-            android:text="@string/weeklyCheckBoxText" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/startTimeButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/bg_button"
-                android:text="@string/startTimeButtonText"
-                android:textColor="#FFFFFF" />
+            android:layout_height="match_parent"
+            android:background="#B5E8EC"
+            android:orientation="vertical"
+            android:paddingLeft="5sp"
+            android:paddingTop="5sp"
+            android:paddingRight="5sp">
 
             <TextView
-                android:id="@+id/toText"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/toTextText"
-                android:textSize="24sp" />
+                android:layout_marginBottom="6sp"
+                android:background="@drawable/bg_bigtext"
+                android:gravity="center"
+                android:paddingLeft="6sp"
+                android:paddingTop="10sp"
+                android:paddingRight="6sp"
+                android:paddingBottom="10sp"
+                android:text="@string/calendarTitle"
+                android:textSize="40sp"
+                app:fontFamily="sans-serif-light" />
+
+            <TextView
+                android:id="@+id/calendarCaption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_medtext"
+                android:gravity="center"
+                android:padding="7sp"
+                android:text="@string/calendarCaptionText"
+                android:textColor="@android:color/black"
+                android:textSize="19sp" />
+
+            <CalendarView
+                android:id="@+id/Calendarr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/weeklyCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_answer"
+                android:checked="false"
+                android:clickable="false"
+                android:text="@string/weeklyCheckBoxText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/startTimeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:text="@string/startTimeButtonText"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/toText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/toTextText"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/endTimeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:text="@string/endTimeButtonText"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
 
             <Button
-                android:id="@+id/endTimeButton"
-                android:layout_width="0dp"
+                android:id="@+id/addTimeButton"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginTop="12sp"
                 android:background="@drawable/bg_button"
-                android:text="@string/endTimeButtonText"
+                android:text="@string/addTimeButtonText"
                 android:textColor="#FFFFFF" />
 
+            <Button
+                android:id="@+id/finishedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12sp"
+                android:background="@drawable/bg_button"
+                android:text="@string/finishedButtonText"
+                android:textColor="#FFFFFF"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="450dp" />
+
+            <!--android:maxDate="10/22/2001"
+                android:minDate="10/22/2019"-->
         </LinearLayout>
-
-        <Button
-            android:id="@+id/addTimeButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12sp"
-            android:background="@drawable/bg_button"
-            android:text="@string/addTimeButtonText"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:id="@+id/finishedButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12sp"
-            android:background="@drawable/bg_button"
-            android:text="@string/finishedButtonText"
-            android:textColor="#FFFFFF"
-            tools:layout_editor_absoluteX="30dp"
-            tools:layout_editor_absoluteY="450dp" />
-
-        <!--android:maxDate="10/22/2001"
-            android:minDate="10/22/2019"-->
-    </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
