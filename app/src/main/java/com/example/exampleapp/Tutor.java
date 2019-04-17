@@ -68,7 +68,7 @@ public class Tutor {
     }
 
     public String toString(){
-        return "times "+ times.toString()+" name: "+ name;
+        return "times "+ times.toString()+" name: "+ name + " preferences " + preferences.toString() +" subjects "+ subjects.toString();
     }
 
 }
