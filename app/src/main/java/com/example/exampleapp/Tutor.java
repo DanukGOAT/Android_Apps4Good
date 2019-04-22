@@ -1,14 +1,36 @@
 package com.example.exampleapp;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 
-public class Tutor {
+public class Tutor implements Parcelable {
     private String name;
     private ArrayList<String> times;
 //    private String times;
     private static int userNum=1;
     private ArrayList<String> subjects;
     private ArrayList<String> preferences;
+
+    protected Tutor(Parcel in) {
+        name = in.readString();
+        times = in.createStringArrayList();
+        subjects = in.createStringArrayList();
+        preferences = in.createStringArrayList();
+    }
+
+    public static final Creator<Tutor> CREATOR = new Creator<Tutor>() {
+        @Override
+        public Tutor createFromParcel(Parcel in) {
+            return new Tutor(in);
+        }
+
+        @Override
+        public Tutor[] newArray(int size) {
+            return new Tutor[size];
+        }
+    };
 
     public ArrayList<String> getSubjects() {
         return subjects;
@@ -71,4 +93,16 @@ public class Tutor {
         return "times "+ times.toString()+" name: "+ name + " preferences " + preferences.toString() +" subjects "+ subjects.toString();
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeStringList(times);
+        dest.writeStringList(subjects);
+        dest.writeStringList(preferences);
+    }
 }

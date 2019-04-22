@@ -14,7 +14,6 @@ public class TutorQuestions extends AppCompatActivity {
     ArrayList<Integer> subjects = new ArrayList<Integer>();
     ArrayList<Integer> preferences = new ArrayList<Integer>();
     private Tutor tutor = new Tutor();
-    private static final String TAG="Test123";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +34,6 @@ public class TutorQuestions extends AppCompatActivity {
 
         for (int i = 0; i < ja.size(); i++) {
             if (ja.get(i).isChecked()) {
-//                Log.w(TAG, "did it work now?");
                 subjects.add(i);
             }
         }
@@ -64,14 +62,14 @@ public class TutorQuestions extends AppCompatActivity {
         addInfo();
         tutor.setPreferences(preferencesOfTutor());
         tutor.setSubjects(subjectsToTutor());
-        Log.w(TAG, tutor.toString());
-//        Log.w(TAG, "did it work?");
+        Log.w("Preferences", "");
         Intent intent = new Intent(this, CalendarDisplay.class);
+        intent.putExtra("tutor object", tutor);
         startActivity(intent);
     }
 
     public ArrayList<String> subjectsToTutor(){
-        String arr[] = {"Math", "Physics", "STEM", "STW", "Humanities", "Spanish", "French", "Computer Science"};
+        String arr[] = {"empty string", "Math", "Physics", "STEM", "STW", "Humanities", "Spanish", "French", "Computer Science"};
         ArrayList<String> tutorSubjects = new ArrayList<String>();
         for(int i=0; i<subjects.size(); i++){
             tutorSubjects.add(arr[subjects.get(i)]);
@@ -80,9 +78,9 @@ public class TutorQuestions extends AppCompatActivity {
     }
 
     public ArrayList<String> preferencesOfTutor(){
-        String arr[] = {"At my home", "At student's home", "Public place", "Online", "No Preference"};
+        String arr[] = {"empty string", "At my home", "At student's home", "Public place", "Online", "No Preference"};
         ArrayList<String> tutorPreferences = new ArrayList<String>();
-        for(int i=0; i<subjects.size(); i++){
+        for(int i=0; i<preferences.size(); i++){
             tutorPreferences.add(arr[preferences.get(i)]);
         }
         return tutorPreferences;

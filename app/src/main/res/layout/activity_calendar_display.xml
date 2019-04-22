@@ -22,7 +22,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="6sp"
+                android:layout_marginBottom="15sp"
                 android:background="@drawable/bg_bigtext"
                 android:gravity="center"
                 android:paddingLeft="6sp"
@@ -37,6 +37,7 @@
                 android:id="@+id/calendarCaption"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
                 android:background="@drawable/bg_medtext"
                 android:gravity="center"
                 android:padding="7sp"
@@ -48,22 +49,23 @@
                 android:id="@+id/weeklyCheckBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
                 android:background="@drawable/bg_answer"
                 android:checked="false"
-                android:layout_marginTop="10dp"
                 android:text="@string/weeklyCheckBoxText" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_margin="10sp"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/startTimeButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="6sp"
+                    android:layout_marginRight="8sp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_button"
                     android:text="@string/startTimeButtonText"
@@ -82,7 +84,7 @@
                     android:id="@+id/endTimeButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="6sp"
+                    android:layout_marginLeft="8sp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_button"
                     android:text="@string/endTimeButtonText"
@@ -106,6 +108,7 @@
                 android:id="@+id/finishedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6sp"
                 android:layout_marginTop="12sp"
                 android:background="@drawable/bg_button"
                 android:text="@string/finishedButtonText"
@@ -126,8 +129,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-        <!--android:maxDate="10/22/2001"
-            android:minDate="10/22/2019"-->
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
