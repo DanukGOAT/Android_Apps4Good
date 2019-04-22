@@ -33,6 +33,13 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
     public String date="";
     public String time="";
     public boolean isStartTime=false;
+
+    private Tutor Avi;
+
+    public void setTutor(Tutor tutor) {
+        this.tutor = tutor;
+    }
+
     public Tutor tutor =  new Tutor();
 
     @Override
@@ -40,15 +47,11 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar_display);
 
-        ArrayList<String> arrs = new ArrayList<String>();
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
 
-        arrs.add("Sup Daniel");
+        Avi = bundle.getParcelable("tutor object");
 
-        Tutor Avi = new Tutor(arrs, "Avi");
-//        Avi.setName("Avi");
-        Avi.addTime("timeThingy");
-        Avi.addTime("timeThingy2");
-        Avi.addTime("timeThingy3");
 
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("Users");
@@ -97,6 +100,7 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 date = month + "/"+ dayOfMonth+"/"+year;
+                Avi.addTime(date);
 //                Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
 //                intent.putExtra("Personal Contact Information", date);
 //                startActivity(intent);
@@ -115,7 +119,7 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         addTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tutor.addTime(date + " * " + time);
+                Avi.addTime(date + " * " + time);
                 Intent intent = new Intent(CalendarDisplay.this, CalendarDisplay.class);
                 intent.putExtra("Personal Contact Information", date);
                 startActivity(intent);
