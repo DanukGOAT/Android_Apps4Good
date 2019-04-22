@@ -93,8 +93,11 @@
             <Button
                 android:id="@+id/addTimeButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="6sp"
                 android:layout_marginTop="12sp"
+                android:layout_marginRight="6sp"
+                android:layout_weight="1"
                 android:background="@drawable/bg_button"
                 android:text="@string/addTimeButtonText"
                 android:textColor="#FFFFFF" />
