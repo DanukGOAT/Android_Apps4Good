@@ -9,15 +9,15 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="#B5E8EC"
         android:orientation="vertical"
         android:paddingLeft="5sp"
-        android:paddingRight="5sp"
         android:paddingTop="5sp"
+        android:paddingRight="5sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="#B5E8EC">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/Welcome"
@@ -39,6 +39,7 @@
             android:id="@+id/NextApp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="35sp"
             android:layout_marginBottom="4dp"
             android:background="@drawable/bg_medtext"
             android:gravity="center"
@@ -46,7 +47,6 @@
             android:paddingTop="10sp"
             android:paddingRight="6sp"
             android:paddingBottom="10sp"
-            android:layout_marginTop="35sp"
             android:text="@string/tutorNextTime"
             android:textColor="#062C5B"
             android:textSize="24sp"
@@ -56,6 +56,7 @@
             android:id="@+id/NewApps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="35sp"
             android:layout_marginBottom="4dp"
             android:background="@drawable/bg_medtext"
             android:gravity="center"
@@ -63,16 +64,16 @@
             android:paddingTop="10sp"
             android:paddingRight="6sp"
             android:paddingBottom="10sp"
-            android:layout_marginTop="35sp"
             android:text="@string/tutorNewTimes"
             android:textColor="#062C5B"
             android:textSize="22sp"
-            app:fontFamily="sans-serif-medium"  />
+            app:fontFamily="sans-serif-medium" />
 
         <TextView
             android:id="@+id/ComingApps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="35sp"
             android:layout_marginBottom="4dp"
             android:background="@drawable/bg_medtext"
             android:gravity="center"
@@ -80,20 +81,19 @@
             android:paddingTop="10sp"
             android:paddingRight="6sp"
             android:paddingBottom="10sp"
-            android:layout_marginTop="35sp"
             android:text="@string/tutorUpcomingTimes"
             android:textColor="#062C5B"
             android:textSize="20sp"
-            app:fontFamily="sans-serif-medium"  />
+            app:fontFamily="sans-serif-medium" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/tutorSchedule"
-            android:background="@drawable/bg_button"
             android:layout_marginTop="35dp"
-            android:textColor="#FFFFFF"/>
+            android:background="@drawable/bg_button"
+            android:text="@string/tutorSchedule"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
