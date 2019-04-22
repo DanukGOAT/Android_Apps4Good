@@ -73,6 +73,7 @@
             android:layout_marginTop="6sp"
             android:layout_marginRight="6sp"
             android:background="@drawable/bg_button"
+            android:onClick="debugButtonPress"
             android:text="@string/debugButtonText"
             android:textColor="#FFFFFF" />
 

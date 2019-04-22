@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void debugButtonPress(View v){
-        Intent intent = new Intent(this, CalendarDisplay.class);
+        Intent intent = new Intent(this, tutorSelection.class);
         startActivity(intent);
     }
 }

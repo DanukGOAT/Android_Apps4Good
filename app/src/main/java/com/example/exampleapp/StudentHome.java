@@ -10,4 +10,5 @@ public class StudentHome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_home);
     }
+
 }
