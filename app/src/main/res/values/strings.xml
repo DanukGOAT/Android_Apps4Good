@@ -56,4 +56,5 @@
     <string name="tutorNewTimes">New appointments:\n {student name} at {time} on {date}\n {student name} at {time} on {date}</string>
     <string name="tutorUpcomingTimes">Upcoming appointments:\n {student name} at {time} on {date}\n {student name} at {time} on {date}</string>
     <string name="calendarTitle">Calendar Setup</string>
+    <string name="tutorSelectionTitleText">View and Select Tutors</string>
 </resources>

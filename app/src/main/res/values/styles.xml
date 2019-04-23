@@ -8,6 +8,17 @@
         <item name="colorAccent">#1375A7</item>
     </style>
 
+    <style name="button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">6sp</item>
+        <item name="android:layout_marginRight">6sp</item>
+        <item name="android:layout_marginTop">12sp</item>
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:text">@string/finishedButtonText</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

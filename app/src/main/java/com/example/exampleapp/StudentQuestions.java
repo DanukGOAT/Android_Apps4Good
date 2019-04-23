@@ -1,5 +1,6 @@
 package com.example.exampleapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -45,6 +46,10 @@ public class StudentQuestions extends AppCompatActivity {
         for (int i = 1; i <= ja.size(); i++)
             if (ja.get(i).isChecked())
                 preferences.add(i);
+    }
+    public void goToTutorSelection(View v){
+        Intent intent = new Intent(this, tutorSelection.class);
+        startActivity(intent);
     }
 
 }

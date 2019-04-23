@@ -162,6 +162,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15sp"
                 android:background="@drawable/bg_button"
+                android:onClick="goToTutorSelection"
                 android:text="@string/next"
                 android:textColor="@android:color/white"
                 tools:layout_editor_absoluteX="161dp"

@@ -9,6 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#B5E8EC"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
@@ -16,7 +17,27 @@
             android:id="@+id/tutorButtonContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"></LinearLayout>
+            android:background="#B5E8EC"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6sp"
+                android:layout_marginTop="6sp"
+                android:layout_marginRight="6sp"
+                android:layout_marginBottom="15sp"
+                android:background="@drawable/bg_bigtext"
+                android:gravity="center"
+                android:paddingLeft="6sp"
+                android:paddingTop="6sp"
+                android:paddingRight="6sp"
+                android:paddingBottom="6sp"
+                android:text="@string/tutorSelectionTitleText"
+                android:textSize="40sp"
+                app:fontFamily="sans-serif-light" />
+        </LinearLayout>
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
