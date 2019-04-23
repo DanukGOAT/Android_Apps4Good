@@ -21,8 +21,8 @@ public class tutorSelection extends AppCompatActivity {
 
         for(int i = 0; i < 4; i++){
             tutorButtons.add(new Button(this));
-            tutorButtons.get(0).setText("tutor1");
-            tutorButtonContainer.addView(tutorButtons.get(0));
+            tutorButtons.get(i).setText("tutor1");
+            tutorButtonContainer.addView(tutorButtons.get(i));
         }
 
     }
