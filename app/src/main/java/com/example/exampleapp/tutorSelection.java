@@ -22,7 +22,7 @@ public class tutorSelection extends AppCompatActivity {
         LinearLayout tutorButtonContainer = (LinearLayout) findViewById(R.id.tutorButtonContainer);
 
         for(int i = 0; i < 4; i++){
-            //tutorButtons.add(new Button(new ContextThemeWrapper(context, buttonStyle), null, buttonStyle);
+            //tutorButtons.add(new Button(context, null, buttonStyle));
             //tutorButtons.get(i).setText("tutor1");
             //tutorButtonContainer.addView(tutorButtons.get(i));
         }
