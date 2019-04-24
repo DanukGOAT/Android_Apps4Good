@@ -108,6 +108,9 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         finishedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                database = FirebaseDatabase.getInstance();
+                myRef = database.getReference("Users");
+                myRef.child(tutor.getName()).setValue(tutor);
                 Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
                 intent.putExtra("Personal Contact Information", date);
                 intent.putExtra("tutor object", tutor);

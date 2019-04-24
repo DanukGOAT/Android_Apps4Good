@@ -18,7 +18,10 @@ public class Tutor implements Parcelable {
     private String experience;
     private String contactInfo;
 
-
+    public void otherTutor(Tutor tutor){
+        this.name=tutor.name;
+        this.times
+    }
 
     public String getBlurb() {
         return blurb;

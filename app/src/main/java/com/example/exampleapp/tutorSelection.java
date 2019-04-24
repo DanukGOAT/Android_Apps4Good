@@ -52,9 +52,7 @@ public class tutorSelection extends AppCompatActivity {
 //
 //        tutor = bundle.getParcelable("tutor object");
 
-        database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("Users");
-        myRef.child(tutor.getName()).setValue(tutor);
+
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
