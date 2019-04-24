@@ -20,7 +20,7 @@ public class Tutor implements Parcelable {
 
     public void otherTutor(Tutor tutor){
         this.name=tutor.name;
-        this.times
+        //this.times
     }
 
     public String getBlurb() {
