@@ -1,5 +1,6 @@
 package com.example.exampleapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -38,15 +39,18 @@ public class tutorSelection extends AppCompatActivity {
 
         ArrayList<Button> tutorButtons = new ArrayList<>();
 
-        LinearLayout tutorButtonContainer = (LinearLayout) findViewById(R.id.tutorButtonContainer);
+        final LinearLayout tutorButtonContainer = (LinearLayout) findViewById(R.id.tutorButtonContainer);
 
         for(int i = 0; i < 4; i++){
-            //tutorButtons.add(new Button(context, null, buttonStyle));
+            //tutorButtons.add(new Button(new ContextThemeWrapper(context, buttonStyle), null, buttonStyle);
             //tutorButtons.get(i).setText("tutor1");
             //tutorButtonContainer.addView(tutorButtons.get(i));
         }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 //        Intent intent = getIntent();
 //        Bundle bundle = intent.getExtras();
 //
@@ -59,6 +63,9 @@ public class tutorSelection extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot child: dataSnapshot.getChildren()){
                     Log.w(TAG, child.getValue(Tutor.class).toString());
+                    Button tutorButton = new Button(tutorSelection.this);
+                    tutorButton.setText(child.getValue(Tutor.class).getName());
+                    tutorButtonContainer.addView(tutorButton);
                 }
             }
 
