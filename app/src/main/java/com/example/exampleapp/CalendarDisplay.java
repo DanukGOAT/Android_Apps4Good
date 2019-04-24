@@ -36,7 +36,7 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
 
 
 
-    private Tutor tutor;
+    private Tutor tutor = new Tutor();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

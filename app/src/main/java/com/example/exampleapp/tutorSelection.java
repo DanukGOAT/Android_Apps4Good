@@ -27,7 +27,7 @@ public class tutorSelection extends AppCompatActivity {
 
     private static final String TAG="AviIsMyFather";
 
-    private Tutor tutor;
+    private Tutor tutor = new Tutor();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +47,10 @@ public class tutorSelection extends AppCompatActivity {
         }
 
 
-        Intent intent = getIntent();
-        Bundle bundle = intent.getExtras();
-
-        tutor = bundle.getParcelable("tutor object");
+//        Intent intent = getIntent();
+//        Bundle bundle = intent.getExtras();
+//
+//        tutor = bundle.getParcelable("tutor object");
 
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("Users");

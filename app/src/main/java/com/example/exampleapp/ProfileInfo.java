@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class ProfileInfo extends AppCompatActivity {
-    private Tutor tutor;
+    private Tutor tutor = new Tutor();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
