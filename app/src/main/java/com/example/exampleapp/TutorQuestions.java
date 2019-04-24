@@ -69,7 +69,7 @@ public class TutorQuestions extends AppCompatActivity {
     }
 
     public ArrayList<String> subjectsToTutor(){
-        String arr[] = {"empty string", "Math", "Physics", "STEM", "STW", "Humanities", "Spanish", "French", "Computer Science"};
+        String arr[] = {"Math", "Physics", "STEM", "STW", "Humanities", "Spanish", "French", "Computer Science"};
         ArrayList<String> tutorSubjects = new ArrayList<String>();
         for(int i=0; i<subjects.size(); i++){
             tutorSubjects.add(arr[subjects.get(i)]);
@@ -78,7 +78,7 @@ public class TutorQuestions extends AppCompatActivity {
     }
 
     public ArrayList<String> preferencesOfTutor(){
-        String arr[] = {"empty string", "At my home", "At student's home", "Public place", "Online", "No Preference"};
+        String arr[] = {"At my home", "At student's home", "Public place", "Online", "No Preference"};
         ArrayList<String> tutorPreferences = new ArrayList<String>();
         for(int i=0; i<preferences.size(); i++){
             tutorPreferences.add(arr[preferences.get(i)]);

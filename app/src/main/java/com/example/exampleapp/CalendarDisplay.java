@@ -34,13 +34,9 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
     public String time="";
     public boolean isStartTime=false;
 
-    private Tutor Avi;
 
-    public void setTutor(Tutor tutor) {
-        this.tutor = tutor;
-    }
 
-    public Tutor tutor =  new Tutor();
+    private Tutor tutor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,27 +46,29 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
 
-        Avi = bundle.getParcelable("tutor object");
+        tutor = bundle.getParcelable("tutor object");
 
 
-        database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("Users");
+
+
 //        myRef.setValue("defaultUser");
-        myRef.child("defaultUser").setValue(Avi);
-
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot child: dataSnapshot.getChildren()){
-                    Log.w(TAG, child.getValue(Tutor.class).toString());
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.w(TAG, "Failed to read value.", databaseError.toException());
-            }
-        });
+//        database = FirebaseDatabase.getInstance();
+//        myRef = database.getReference("Users");
+//        myRef.child("defaultUser").setValue(tutor);
+//
+//        myRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                for(DataSnapshot child: dataSnapshot.getChildren()){
+//                    Log.w(TAG, child.getValue(Tutor.class).toString());
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//                Log.w(TAG, "Failed to read value.", databaseError.toException());
+//            }
+//        });
 
 
         Button endTimeButton = (Button) findViewById(R.id.endTimeButton);
@@ -99,8 +97,8 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                date = month + "/"+ dayOfMonth+"/"+year;
-                Avi.addTime(date);
+                date = month + "/"+ dayOfMonth+"/"+year+" ";
+                tutor.addTime(date);
 //                Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
 //                intent.putExtra("Personal Contact Information", date);
 //                startActivity(intent);
@@ -112,6 +110,7 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
             public void onClick(View v) {
                 Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
                 intent.putExtra("Personal Contact Information", date);
+                intent.putExtra("tutor object", tutor);
                 startActivity(intent);
             }
         });
@@ -119,7 +118,7 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         addTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Avi.addTime(date + " * " + time);
+                tutor.addTime(date + " * " + time);
                 Intent intent = new Intent(CalendarDisplay.this, CalendarDisplay.class);
                 intent.putExtra("Personal Contact Information", date);
                 startActivity(intent);

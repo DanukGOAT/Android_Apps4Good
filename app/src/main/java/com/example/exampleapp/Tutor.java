@@ -13,12 +13,47 @@ public class Tutor implements Parcelable {
     private ArrayList<String> subjects;
     private ArrayList<String> preferences;
 
+
+    private String blurb;
+    private String experience;
+    private String contactInfo;
+
+
+
+    public String getBlurb() {
+        return blurb;
+    }
+
+    public void setBlurb(String blurb) {
+        this.blurb = blurb;
+    }
+
+    public String getExperience() {
+        return experience;
+    }
+
+    public void setExperience(String experience) {
+        this.experience = experience;
+    }
+
+    public String getContactInfo() {
+        return contactInfo;
+    }
+
+    public void setContactInfo(String contactInfo) {
+        this.contactInfo = contactInfo;
+    }
+
+
+
+
     protected Tutor(Parcel in) {
         name = in.readString();
         times = in.createStringArrayList();
         subjects = in.createStringArrayList();
         preferences = in.createStringArrayList();
     }
+
 
     public static final Creator<Tutor> CREATOR = new Creator<Tutor>() {
         @Override
@@ -52,8 +87,11 @@ public class Tutor implements Parcelable {
         times = new ArrayList<String>();
         subjects = new ArrayList<String>();
         preferences  = new ArrayList<String>();
-        name = ""+userNum;
+        name=""+userNum;
         userNum++;
+        blurb = "";
+        experience = "";
+        contactInfo = "";
     }
 
     public String getName() {
