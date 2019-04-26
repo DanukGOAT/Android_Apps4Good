@@ -47,12 +47,14 @@ public class tutorSelection extends AppCompatActivity {
             //tutorButtonContainer.addView(tutorButtons.get(i));
         }
 
+
 //        Intent intent = getIntent();
 //        Bundle bundle = intent.getExtras();
 //
 //        tutor = bundle.getParcelable("tutor object");
 
-
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("Users");
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
