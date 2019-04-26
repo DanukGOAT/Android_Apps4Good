@@ -18,9 +18,43 @@ public class Tutor implements Parcelable {
     private String experience;
     private String contactInfo;
 
-    public void otherTutor(Tutor tutor){
-        this.name=tutor.name;
-        this.times
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeStringList(times);
+        dest.writeStringList(subjects);
+        dest.writeStringList(preferences);
+        dest.writeString(blurb);
+        dest.writeString(experience);
+        dest.writeString(contactInfo);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Tutor> CREATOR = new Creator<Tutor>() {
+        @Override
+        public Tutor createFromParcel(Parcel in) {
+            return new Tutor(in);
+        }
+
+        @Override
+        public Tutor[] newArray(int size) {
+            return new Tutor[size];
+        }
+    };
+
+    public void otherTutor(Tutor otherTutor){
+        this.name=otherTutor.name;
+        this.times = (ArrayList<String>) otherTutor.getTimes().clone();
+        this.subjects= (ArrayList<String>) otherTutor.getSubjects().clone();
+        this.preferences= (ArrayList<String>) otherTutor.getPreferences().clone();
+        this.blurb=otherTutor.getBlurb();
+        this.experience=otherTutor.getExperience();
+        this.contactInfo=otherTutor.getContactInfo();
     }
 
     public String getBlurb() {
@@ -58,17 +92,7 @@ public class Tutor implements Parcelable {
     }
 
 
-    public static final Creator<Tutor> CREATOR = new Creator<Tutor>() {
-        @Override
-        public Tutor createFromParcel(Parcel in) {
-            return new Tutor(in);
-        }
 
-        @Override
-        public Tutor[] newArray(int size) {
-            return new Tutor[size];
-        }
-    };
 
     public ArrayList<String> getSubjects() {
         return subjects;
@@ -134,16 +158,7 @@ public class Tutor implements Parcelable {
         return "times "+ times.toString()+" name: "+ name + " preferences " + preferences.toString() +" subjects "+ subjects.toString();
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(name);
-        dest.writeStringList(times);
-        dest.writeStringList(subjects);
-        dest.writeStringList(preferences);
-    }
+
+
 }

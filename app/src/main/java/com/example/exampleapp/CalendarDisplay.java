@@ -35,8 +35,11 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
     public boolean isStartTime=false;
 
 
+    public void setTutor(Tutor tut) {
+        tutor.otherTutor(tut);
+    }
 
-    private Tutor tutor = new Tutor();
+    public Tutor tutor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +49,9 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
 
-        tutor = bundle.getParcelable("tutor object");
+        tutor=bundle.getParcelable("tutor object");
+
+       // tutor.otherTutor(bundle.getParcelable("tutor object"));
 
 
 
@@ -110,7 +115,7 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
             public void onClick(View v) {
                 database = FirebaseDatabase.getInstance();
                 myRef = database.getReference("Users");
-                myRef.child(tutor.getName()).setValue(tutor);
+                myRef.child(""+tutor.getUserNum()).setValue(tutor);
                 Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
                 intent.putExtra("Personal Contact Information", date);
                 intent.putExtra("tutor object", tutor);
@@ -123,6 +128,7 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
             public void onClick(View v) {
                 tutor.addTime(date + " * " + time);
                 Intent intent = new Intent(CalendarDisplay.this, CalendarDisplay.class);
+                intent.putExtra("tutor object", tutor);
                 intent.putExtra("Personal Contact Information", date);
                 startActivity(intent);
             }
