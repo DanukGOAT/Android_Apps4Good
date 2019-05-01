@@ -1,37 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/parent_layout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#B5E8EC">
 
     <TextView
         android:id="@+id/tutorName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:background="@drawable/bg_medtext"
+        android:padding="5sp"
         android:text="First Last"
-        android:textColor="#000"
-        android:textSize="34sp" />
-
-    <TextView
-        android:id="@+id/tutorPreference"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="right"
-        android:text="Prefers to meet: no preference" />
+        android:textColor="#062C5B"
+        android:textSize="36sp"
+        app:fontFamily="sans-serif-light" />
 
     <TextView
         android:id="@+id/tutorSubject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tutorName"
-        android:text="Math, Physics, Humanities" />
+        android:layout_marginVertical="5sp"
+        android:layout_marginLeft="13sp"
+        android:layout_marginRight="7sp"
+        android:background="@drawable/bg_answer"
+        android:padding="5sp"
+        android:text="Math, Physics, Humanities"
+        android:textColor="#010101" />
 
     <TextView
         android:id="@+id/tutorTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tutorSubject"
+        android:layout_marginVertical="5sp"
+        android:layout_marginLeft="13sp"
+        android:layout_marginRight="7sp"
+        android:background="@drawable/bg_answer"
+        android:padding="5sp"
+        android:textColor="#010101"
         android:text="XX:XX to XX:XX Monday [A]PM" />
+
+    <TextView
+        android:id="@+id/tutorPreference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tutorTime"
+        android:layout_marginVertical="5sp"
+        android:layout_marginLeft="13sp"
+        android:layout_marginRight="7sp"
+        android:background="@drawable/bg_answer"
+        android:padding="5sp"
+        android:textColor="#010101"
+        android:text="Prefers to meet: no preference" />
+
+    <TextView android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_below="@id/tutorPreference"
+        android:layout_marginHorizontal="2sp"
+        android:layout_marginVertical="4sp"
+        android:background="#000000"/>
 
     //android:onClick=""
 </RelativeLayout>
