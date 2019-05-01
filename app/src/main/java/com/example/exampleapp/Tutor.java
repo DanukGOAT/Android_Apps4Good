@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Tutor implements Parcelable {
     private String name;
     private ArrayList<String> times;
-//    private String times;
+    //    private String times;
     private static int userNum=1;
     private ArrayList<String> subjects;
     private ArrayList<String> preferences;

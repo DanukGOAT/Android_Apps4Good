@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tutorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="First Last"
+        android:textColor="#000"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/tutorPreference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="Prefers to meet: no preference" />
+
+    <TextView
+        android:id="@+id/tutorSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tutorName"
+        android:text="Math, Physics, Humanities" />
+
+    <TextView
+        android:id="@+id/tutorTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tutorSubject"
+        android:text="XX:XX to XX:XX Monday [A]PM" />
+
+    //android:onClick=""
+</RelativeLayout>
