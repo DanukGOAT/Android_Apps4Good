@@ -9,6 +9,13 @@ import android.widget.TextView;
 
 public class ProfileInfo extends AppCompatActivity {
     private Tutor tutor = new Tutor();
+    private TextView usrname;
+    private TextView blurb;
+    private TextView experience;
+    private TextView contactInfo;
+    private TextView subjects;
+    private TextView preferences;
+    private TextView mamsPlug;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +27,51 @@ public class ProfileInfo extends AppCompatActivity {
 
         tutor = bundle.getParcelable("tutor object");
 
-        final TextView usrname = findViewById(R.id.userName);
-        final TextView blurb = findViewById(R.id.personalBlurb);
-        final TextView experience = findViewById(R.id.tutorExperience);
-        final TextView contactInfo = findViewById(R.id.contactInfo);
-        TextView subjects = findViewById(R.id.subjects);
-        TextView preferences = findViewById(R.id.where);
+        usrname = findViewById(R.id.userName);
+        blurb = findViewById(R.id.personalBlurb);
+        experience = findViewById(R.id.tutorExperience);
+        contactInfo = findViewById(R.id.contactInfo);
+        subjects = findViewById(R.id.subjects);
+        preferences = findViewById(R.id.where);
         subjects.setText(tutor.getSubjects().toString());
         preferences.setText(tutor.getPreferences().toString());
         Button editBut = findViewById(R.id.editButton);
+        mamsPlug = findViewById(R.id.plugForMAMS);
+
+        usrname.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                usrname.setText("");
+            }
+        });
+
+        blurb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                blurb.setText("");
+            }
+        });
+
+        experience.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                experience.setText("");
+            }
+        });
+
+        contactInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contactInfo.setText("");
+            }
+        });
+
+        mamsPlug.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mamsPlug.setText("https://www.massacademy.org/");
+            }
+        });
 
 
 

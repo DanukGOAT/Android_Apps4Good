@@ -61,7 +61,8 @@ public class TutorQuestions extends AppCompatActivity {
     public void tutorNextButtonPress(View v){
         addInfo();
         tutor.setPreferences(preferencesOfTutor());
-        Log.w("Preferences", "");
+        tutor.setSubjects(subjectsToTutor());
+//        Log.w("Preferences", "");
         Intent intent = new Intent(this, CalendarDisplay.class);
         intent.putExtra("tutor object", tutor);
         startActivity(intent);
