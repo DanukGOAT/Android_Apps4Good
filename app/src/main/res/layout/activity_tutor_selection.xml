@@ -14,30 +14,34 @@
         tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
-            android:id="@+id/tutorButtonContainer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#B5E8EC"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/tutorSelectionTitle"
+                android:text="@string/tutorSelectionTitleText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="6sp"
-                android:layout_marginTop="6sp"
-                android:layout_marginRight="6sp"
-                android:layout_marginBottom="15sp"
+                android:layout_marginBottom="4dp"
                 android:background="@drawable/bg_bigtext"
                 android:gravity="center"
                 android:paddingLeft="6sp"
-                android:paddingTop="6sp"
+                android:paddingTop="10sp"
                 android:paddingRight="6sp"
-                android:paddingBottom="6sp"
-                android:text="@string/tutorSelectionTitleText"
-                android:textSize="40sp"
-                app:fontFamily="sans-serif-light" />
+                android:paddingBottom="10sp"
+                android:textColor="#062C5B"
+                android:textSize="36sp"
+                app:fontFamily="sans-serif-light"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerv_view">
+
+            </android.support.v7.widget.RecyclerView>
         </LinearLayout>
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

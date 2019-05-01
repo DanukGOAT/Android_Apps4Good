@@ -123,6 +123,7 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
             public void onClick(View v) {
                 tutor.addTime(date + " * " + time);
                 Intent intent = new Intent(CalendarDisplay.this, CalendarDisplay.class);
+                intent.putExtra("tutor object", tutor);
                 intent.putExtra("Personal Contact Information", date);
                 startActivity(intent);
             }
