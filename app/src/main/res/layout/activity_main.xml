@@ -72,16 +72,10 @@
             android:layout_marginLeft="6sp"
             android:layout_marginTop="6sp"
             android:layout_marginRight="6sp"
-            android:background="@drawable/bg_button"
             android:onClick="debugButtonPress"
-            android:text="@string/debugButtonText"
-            android:textColor="#FFFFFF" />
+            android:text="@string/debugButtonText" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="If you are a returning tutor, enter your username below" />
+
 
         <EditText
             android:id="@+id/editText"
@@ -89,13 +83,23 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Username" />
+            android:text="If you are a returning tutor, enter your username here"
+            android:background="@drawable/bg_answer"
+            android:layout_marginHorizontal="10sp"
+            android:layout_marginTop="30sp"
+            android:padding="5sp"
+            android:textSize="16sp"
+            android:textColor="#777777"/>
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Finished" />
+            android:text="Finished"
+            android:background="@drawable/bg_button"
+            android:textColor="#FFFFFF"
+            android:layout_marginHorizontal="6sp"
+            android:layout_marginTop="10sp"/>
 
     </LinearLayout>
 

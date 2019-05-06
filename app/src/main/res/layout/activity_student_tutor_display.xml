@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".studentTutorDisplay">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B5E8EC"
+        android:orientation="vertical"
+        android:paddingLeft="5sp"
+        android:paddingTop="5sp"
+        android:paddingRight="5sp">
+
+        <TextView
+            android:id="@+id/Welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_bigtext"
+            android:gravity="center"
+            android:paddingLeft="6sp"
+            android:paddingTop="10sp"
+            android:paddingRight="6sp"
+            android:paddingBottom="10sp"
+            android:text="Profile Info"
+            android:textColor="#062C5B"
+            android:textSize="36sp"
+            app:fontFamily="sans-serif-light" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:text="@string/userNameText" />
+
+        <TextView
+            android:id="@+id/personalBlurb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:padding="5dp"
+            android:text="@string/personalBlurbText" />
+
+        <TextView
+            android:id="@+id/tutorExperience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:padding="5dp"
+            android:text="@string/tutorExperienceText" />
+
+        <TextView
+            android:id="@+id/subjects"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:padding="5dp"
+            android:text="Insert teachable subjects" />
+
+        <TextView
+            android:id="@+id/where"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:padding="5dp"
+            android:text="@string/whereText" />
+
+        <TextView
+            android:id="@+id/plugForMAMS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:padding="5dp"
+            android:text="@string/plugForMAMSText"
+            tools:text="https://www.massacademy.org/" />
+
+        <TextView
+            android:id="@+id/contactInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:autofillHints="AUTOFILL_HINT_PHONE"
+            android:background="@drawable/bg_answer"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:text="@string/personalContactInfoText" />
+
+        <TextView
+            android:id="@+id/timeDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:autofillHints="AUTOFILL_HINT_PHONE"
+            android:background="@drawable/bg_answer"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:text="Insert dates here" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

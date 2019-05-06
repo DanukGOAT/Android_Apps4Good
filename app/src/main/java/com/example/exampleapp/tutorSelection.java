@@ -45,11 +45,11 @@ public class tutorSelection extends AppCompatActivity {
         setContentView(R.layout.activity_tutor_selection);
         Log.d(TAG, "onCreate: started");
         
-        int buttonStyle = R.style.button;
+       // int buttonStyle = R.style.button;
 
         initTutorData();
 
-        ArrayList<Button> tutorButtons = new ArrayList<>();
+       // ArrayList<Button> tutorButtons = new ArrayList<>();
 
 //        final LinearLayout tutorButtonContainer = (LinearLayout) findViewById(R.id.tutorButtonContainer);
 //
