@@ -38,9 +38,9 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_answer"
             android:ems="10"
+            android:hint="@string/userNameText"
             android:inputType="textPersonName"
-            android:padding="5dp"
-            android:text="@string/userNameText" />
+            android:padding="5dp" />
 
         <EditText
             android:id="@+id/personalBlurb"
@@ -49,10 +49,10 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_answer"
             android:ems="10"
+            android:hint="@string/personalBlurbText"
             android:importantForAutofill="no"
             android:inputType="textMultiLine"
-            android:padding="5dp"
-            android:text="@string/personalBlurbText" />
+            android:padding="5dp" />
 
         <EditText
             android:id="@+id/tutorExperience"
@@ -61,10 +61,10 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_answer"
             android:ems="10"
+            android:hint="@string/tutorExperienceText"
             android:importantForAutofill="no"
             android:inputType="textMultiLine"
-            android:padding="5dp"
-            android:text="@string/tutorExperienceText" />
+            android:padding="5dp" />
 
         <EditText
             android:id="@+id/subjects"
@@ -111,9 +111,9 @@
             android:autofillHints="AUTOFILL_HINT_PHONE"
             android:background="@drawable/bg_answer"
             android:ems="10"
+            android:hint="@string/personalContactInfoText"
             android:inputType="textPersonName"
-            android:padding="5dp"
-            android:text="@string/personalContactInfoText" />
+            android:padding="5dp" />
 
         <Button
             android:id="@+id/editButton"
