@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class ProfileInfo extends AppCompatActivity {
     private Tutor tutor = new Tutor();
     private TextView usrname;
@@ -16,6 +19,8 @@ public class ProfileInfo extends AppCompatActivity {
     private TextView subjects;
     private TextView preferences;
     private TextView mamsPlug;
+    private DatabaseReference myRef;
+    private FirebaseDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,8 @@ public class ProfileInfo extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
+
+
 
         tutor = bundle.getParcelable("tutor object");
 
@@ -86,6 +93,9 @@ public class ProfileInfo extends AppCompatActivity {
                 tutor.setBlurb(blurb.getText().toString());
                 tutor.setExperience(experience.getText().toString());
                 tutor.setContactInfo(contactInfo.getText().toString());
+                database = FirebaseDatabase.getInstance();
+                myRef = database.getReference("Users");
+                myRef.child(""+tutor.getName()).setValue(tutor);
                 Intent intent = new Intent(ProfileInfo.this, CalendarDisplay.class);
                 intent.putExtra("tutor object", tutor);
                 startActivity(intent);
