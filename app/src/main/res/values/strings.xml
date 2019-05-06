@@ -38,15 +38,11 @@
     <string name="endTimeButtonText">End Time</string>
     <string name="addTimeButtonText">Add Time</string>
     <string name="finishedButtonText">Finished</string>
-<<<<<<< Updated upstream
+
     <string name="userNameText">Insert name here</string>
     <string name="personalBlurbText">Insert a personal blurb here</string>
     <string name="tutorExperienceText">Insert how many times you have previously tutored here</string>
-=======
-    <string name="userNameText">Insert username here (double click to clear)</string>
-    <string name="personalBlurbText">Insert a personal blurb here (double click to clear)</string>
-    <string name="tutorExperienceText">Insert how many times you have previously tutored here (double click to clear)</string>
->>>>>>> Stashed changes
+
     <string name="subjectsText">Insert teachable subjects here</string>
     <string name="whereText">Insert where you can tutor here</string>
     <string name="plugForMAMSText">https://www.massacademy.org/</string>

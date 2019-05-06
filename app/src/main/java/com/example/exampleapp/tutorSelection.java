@@ -38,6 +38,8 @@ public class tutorSelection extends AppCompatActivity {
     private ArrayList<String> tutorTimes = new ArrayList<>();
     private ArrayList<String> tutorPreferences = new ArrayList<>();
 
+    private ArrayList<Tutor> tutorList = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,51 +91,35 @@ public class tutorSelection extends AppCompatActivity {
     private void initTutorData(){
         Log.d(TAG, "initTutorData: preparing data");
 
-        tutorNames.add("Kevin");
-        tutorPreferences.add("At home, at MAMS");
-        tutorSubjects.add("Math, Physics");
-        tutorTimes.add("8:00 PM Monday, 9:00PM Tuesday");
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("Users");
 
-        tutorNames.add("Nathan");
-        tutorPreferences.add("At home, at MAMS");
-        tutorSubjects.add("Physics, CS");
-        tutorTimes.add("7:00 PM Wednesday, 3:00PM Friday");
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot child: dataSnapshot.getChildren()){
+                    Log.w(TAG, child.getValue(Tutor.class).toString());
+//                    Button tutorButton = new Button(tutorSelection.this);
+//                    tutorButton.setText(child.getValue(Tutor.class).getName());
+//                    tutorButtonContainer.addView(tutorButton);
+                    tutorList.add(child.getValue(Tutor.class));
+                    tutorNames.add(child.getValue(Tutor.class).getName());
+                    tutorPreferences.add(child.getValue(Tutor.class).getPreferences().toString());
+                    tutorSubjects.add(child.getValue(Tutor.class).getSubjects().toString());
+                    tutorTimes.add(child.getValue(Tutor.class).getTimes().toString());
+                }
+            }
 
-        tutorNames.add("Danush");
-        tutorPreferences.add("At WPI");
-        tutorSubjects.add("Humanities ONLY");
-        tutorTimes.add("3:14AM Monday, 12:21PM Sunday");
-
-        tutorNames.add("Kevin");
-        tutorPreferences.add("At home, at MAMS");
-        tutorSubjects.add("Math, Physics");
-        tutorTimes.add("8:00 PM Monday, 9:00PM Tuesday");
-
-
-        tutorNames.add("Nathan");
-        tutorPreferences.add("At home, at MAMS");
-        tutorSubjects.add("Physics, CS");
-        tutorTimes.add("7:00 PM Wednesday, 3:00PM Friday");
-
-        tutorNames.add("Danush");
-        tutorPreferences.add("At WPI");
-        tutorSubjects.add("Humanities ONLY");
-        tutorTimes.add("3:14AM Monday, 12:21PM Sunday");
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.w(TAG, "Failed to read value.", databaseError.toException());
+            }
+        });
 
         tutorNames.add("Kevin");
         tutorPreferences.add("At home, at MAMS");
         tutorSubjects.add("Math, Physics");
         tutorTimes.add("8:00 PM Monday, 9:00PM Tuesday");
-
-        tutorNames.add("Nathan");
-        tutorPreferences.add("At home, at MAMS");
-        tutorSubjects.add("Physics, CS");
-        tutorTimes.add("7:00 PM Wednesday, 3:00PM Friday");
-
-        tutorNames.add("Danush");
-        tutorPreferences.add("At WPI");
-        tutorSubjects.add("Humanities ONLY");
-        tutorTimes.add("3:14AM Monday, 12:21PM Sunday");
 
         initRecyclerView();
     }
