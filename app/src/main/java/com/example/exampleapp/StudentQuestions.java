@@ -48,8 +48,29 @@ public class StudentQuestions extends AppCompatActivity {
                 preferences.add(i);
     }
     public void goToTutorSelection(View v){
+        addInfo();
         Intent intent = new Intent(this, tutorSelection.class);
+        intent.putExtra("student preferences", preferencesOfTutor());
+        intent.putExtra("student subjects", subjectsToTutor());
         startActivity(intent);
+    }
+
+    public ArrayList<String> preferencesOfTutor(){
+        String arr[] = {"At my home", "At student's home", "Public place", "Online", "No Preference"};
+        ArrayList<String> tutorPreferences = new ArrayList<String>();
+        for(int i=0; i<preferences.size(); i++){
+            tutorPreferences.add(arr[preferences.get(i)]);
+        }
+        return tutorPreferences;
+    }
+
+    public ArrayList<String> subjectsToTutor(){
+        String arr[] = {"Math", "Physics", "STEM", "STW", "Humanities", "Spanish", "French", "Computer Science"};
+        ArrayList<String> tutorSubjects = new ArrayList<String>();
+        for(int i=0; i<subjects.size(); i++){
+            tutorSubjects.add(arr[subjects.get(i)]);
+        }
+        return tutorSubjects;
     }
 
 }
