@@ -14,9 +14,9 @@ public class Tutor implements Parcelable {
     private ArrayList<String> preferences;
 
 
-    private String blurb;
-    private String experience;
-    private String contactInfo;
+    private String blurb="default";
+    private String experience="default";
+    private String contactInfo="default";
 
 
     @Override

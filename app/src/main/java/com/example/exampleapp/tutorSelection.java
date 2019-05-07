@@ -38,7 +38,11 @@ public class tutorSelection extends AppCompatActivity {
     private ArrayList<String> tutorTimes = new ArrayList<>();
     private ArrayList<String> tutorPreferences = new ArrayList<>();
 
+    private ArrayList<String> studentPreferences = new ArrayList<>();
+    private ArrayList<String> studentSubjects = new ArrayList<>();
+
     private ArrayList<Tutor> tutorList = new ArrayList<>();
+    private ArrayList<Tutor> sortedTutorList = new ArrayList<>();
 
 
     @Override
@@ -46,6 +50,12 @@ public class tutorSelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutor_selection);
         Log.d(TAG, "onCreate: started");
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+
+        studentPreferences=bundle.getParcelable("student preferences");
+        studentSubjects=bundle.getParcelable("student subjects");
         
        // int buttonStyle = R.style.button;
 
@@ -102,11 +112,10 @@ public class tutorSelection extends AppCompatActivity {
 //                    Button tutorButton = new Button(tutorSelection.this);
 //                    tutorButton.setText(child.getValue(Tutor.class).getName());
 //                    tutorButtonContainer.addView(tutorButton);
-                    tutorList.add(child.getValue(Tutor.class));
-                    tutorNames.add(child.getValue(Tutor.class).getName());
-                    tutorPreferences.add(child.getValue(Tutor.class).getPreferences().toString());
-                    tutorSubjects.add(child.getValue(Tutor.class).getSubjects().toString());
-                    tutorTimes.add(child.getValue(Tutor.class).getTimes().toString());
+                    if(subjectMatch(child.getValue(Tutor.class))) {
+                        tutorList.add(child.getValue(Tutor.class));
+                    }
+
                 }
             }
 
@@ -115,6 +124,14 @@ public class tutorSelection extends AppCompatActivity {
                 Log.w(TAG, "Failed to read value.", databaseError.toException());
             }
         });
+
+        sortTutors();
+        for(Tutor t: sortedTutorList){
+            tutorNames.add(t.getName());
+            tutorPreferences.add(t.getPreferences().toString());
+            tutorSubjects.add(t.getSubjects().toString());
+            tutorTimes.add(t.getTimes().toString());
+        }
 
         tutorNames.add("Kevin");
         tutorPreferences.add("At home, at MAMS");
@@ -130,5 +147,41 @@ public class tutorSelection extends AppCompatActivity {
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(tutorNames,tutorSubjects,tutorTimes,tutorPreferences,this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    public void sortTutors(){
+        boolean inMiddle=false;
+        boolean firstElem=true;
+        for(Tutor t: tutorList){
+            if(firstElem){
+                sortedTutorList.add(t);
+                firstElem=false;
+            }else{
+                for(int i=0; i<sortedTutorList.size(); i++){
+                    if(preferenceNum(t)>=preferenceNum(sortedTutorList.get(i))){
+                        sortedTutorList.add(i, t);
+                        i=sortedTutorList.size()+10;
+                        inMiddle=true;
+                    }
+                }
+                if(!inMiddle){
+                    sortedTutorList.add(t);
+                }
+            }
+        }
+    }
+
+    public boolean subjectMatch(Tutor t){
+        return (t.getSubjects().contains(studentSubjects.get(0)));
+    }
+
+    public int preferenceNum(Tutor t){
+        int count=0;
+        for(String s: studentPreferences){
+            if(t.getPreferences().contains(s)){
+                count++;
+            }
+        }
+        return count;
     }
 }
