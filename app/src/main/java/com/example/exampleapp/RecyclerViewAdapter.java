@@ -3,6 +3,7 @@
 package com.example.exampleapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.text.Layout;
@@ -51,14 +52,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         viewHolder.tutorSubject.setText(tutorSubjects.get(position));
         viewHolder.tutorTime.setText(tutorTimes.get(position));
 
-        viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "onClick: clicked on: " + tutorNames.get(position));
-
-                Toast.makeText(context, tutorNames.get(position), Toast.LENGTH_SHORT).show();
-            }
-        });
+//        viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.d(TAG, "onClick: clicked on: " + tutorNames.get(position));
+//
+//                Toast.makeText(context, tutorNames.get(position), Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(RecyclerViewAdapter.class, studentTutorDisplay.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     @Override
