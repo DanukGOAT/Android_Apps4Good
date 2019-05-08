@@ -63,6 +63,28 @@ public class tutorSelection extends AppCompatActivity {
         
        // int buttonStyle = R.style.button;
 
+
+
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("Users");
+
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot child: dataSnapshot.getChildren()){
+                    Log.w(TAG, child.getValue(Tutor.class).toString());
+//                    Button tutorButton = new Button(tutorSelection.this);
+//                    tutorButton.setText(child.getValue(Tutor.class).getName());
+//                    tutorButtonContainer.addView(tutorButton);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.w(TAG, "Failed to read value.", databaseError.toException());
+            }
+        });
+
         initTutorData();
 
        // ArrayList<Button> tutorButtons = new ArrayList<>();

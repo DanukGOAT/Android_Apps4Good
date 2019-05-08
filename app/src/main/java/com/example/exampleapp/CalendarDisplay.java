@@ -59,23 +59,26 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
 
 
 //        myRef.setValue("defaultUser");
-//        database = FirebaseDatabase.getInstance();
-//        myRef = database.getReference("Users");
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("Users");
 //        myRef.child("defaultUser").setValue(tutor);
-//
-//        myRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                for(DataSnapshot child: dataSnapshot.getChildren()){
-//                    Log.w(TAG, child.getValue(Tutor.class).toString());
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//                Log.w(TAG, "Failed to read value.", databaseError.toException());
-//            }
-//        });
+        Log.w(TAG, "flufffff");
+        myRef.addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Log.w(TAG, "flufffff bruhh");
+                for(DataSnapshot child: dataSnapshot.getChildren()){
+                    Tutor me = child.getValue(Tutor.class);
+                    Log.w(TAG, me.toString());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.w(TAG, "Failed to read value.", databaseError.toException());
+            }
+        });
 
 
         Button endTimeButton = (Button) findViewById(R.id.endTimeButton);
