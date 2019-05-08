@@ -46,22 +46,25 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         Log.d(TAG, "onBindViewHolder: called.");
-
+        Log.d(TAG, "onBindViewHolder: array size");
         viewHolder.tutorName.setText(tutorNames.get(position));
         viewHolder.tutorPreference.setText(tutorPreferences.get(position));
         viewHolder.tutorSubject.setText(tutorSubjects.get(position));
         viewHolder.tutorTime.setText(tutorTimes.get(position));
 
-//        viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.d(TAG, "onClick: clicked on: " + tutorNames.get(position));
-//
-//                Toast.makeText(context, tutorNames.get(position), Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(RecyclerViewAdapter.class, studentTutorDisplay.class);
-//                startActivity(intent);
-//            }
-//        });
+        viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onClick: clicked on: " + tutorNames.get(position));
+
+                Toast.makeText(context, tutorNames.get(position), Toast.LENGTH_SHORT).show();
+
+                Tutor tutor = new Tutor();
+                Intent intent = new Intent(context, studentTutorDisplay.class);
+                intent.putExtra("parcel_data", tutor);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -75,7 +78,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView tutorSubject;
         TextView tutorTime;
         TextView tutorPreference;
-//        Button learnMoreButton;
         RelativeLayout parentLayout;
 
         public ViewHolder(@NonNull View itemView) {
@@ -84,7 +86,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             tutorSubject = itemView.findViewById(R.id.tutorSubject);
             tutorTime = itemView.findViewById(R.id.tutorTime);
             tutorPreference = itemView.findViewById(R.id.tutorPreference);
-//            Button learnMoreButton = itemView.findViewById(R.id.learnMoreButton);
             parentLayout = itemView.findViewById(R.id.parent_layout);
 
 

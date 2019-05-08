@@ -30,7 +30,7 @@ public class tutorSelection extends AppCompatActivity {
 
     private static final String TAG="AviIsMyFather";
 
-    private Tutor tutor = new Tutor();
+//    private Tutor tutor = new Tutor();
 
     //vars
     private ArrayList<String> tutorNames = new ArrayList<>();
@@ -44,6 +44,7 @@ public class tutorSelection extends AppCompatActivity {
     private ArrayList<Tutor> tutorList = new ArrayList<>();
     private ArrayList<Tutor> sortedTutorList = new ArrayList<>();
 
+    private Tutor tutor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,29 +53,21 @@ public class tutorSelection extends AppCompatActivity {
         Log.d(TAG, "onCreate: started");
 
         Intent intent = getIntent();
-        Bundle bundle = intent.getExtras();
+//        Bundle bundle = intent.getExtras();
 
-        studentPreferences=bundle.getParcelable("student preferences");
-        studentSubjects=bundle.getParcelable("student subjects");
-        
-       // int buttonStyle = R.style.button;
+        tutor = getIntent().getParcelableExtra("student tutor");
+
+//        tutor=bundle.getParcelable( "student tutor");
+        studentSubjects=tutor.getSubjects();
+        studentPreferences=tutor.getPreferences();
+
+        Log.w(TAG, "subjectscheck " + studentSubjects.get(0));
+        Log.w(TAG, "preferencescheck " + studentPreferences.get(0));
 
         initTutorData();
 
-       // ArrayList<Button> tutorButtons = new ArrayList<>();
-
-//        final LinearLayout tutorButtonContainer = (LinearLayout) findViewById(R.id.tutorButtonContainer);
-//
-//        for(int i = 0; i < 4; i++){
-//            //tutorButtons.add(new Button(new ContextThemeWrapper(context, buttonStyle), null, buttonStyle);
-//            //tutorButtons.get(i).setText("tutor1");
-//            //tutorButtonContainer.addView(tutorButtons.get(i));
-//        }
-
-
 //        Intent intent = getIntent();
 //        Bundle bundle = intent.getExtras();
-//
 //        tutor = bundle.getParcelable("tutor object");
 
         database = FirebaseDatabase.getInstance();
@@ -85,9 +78,6 @@ public class tutorSelection extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot child: dataSnapshot.getChildren()){
                     Log.w(TAG, child.getValue(Tutor.class).toString());
-//                    Button tutorButton = new Button(tutorSelection.this);
-//                    tutorButton.setText(child.getValue(Tutor.class).getName());
-//                    tutorButtonContainer.addView(tutorButton);
                 }
             }
 
@@ -109,9 +99,6 @@ public class tutorSelection extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot child: dataSnapshot.getChildren()){
                     Log.w(TAG, child.getValue(Tutor.class).toString());
-//                    Button tutorButton = new Button(tutorSelection.this);
-//                    tutorButton.setText(child.getValue(Tutor.class).getName());
-//                    tutorButtonContainer.addView(tutorButton);
                     if(subjectMatch(child.getValue(Tutor.class))) {
                         tutorList.add(child.getValue(Tutor.class));
                     }

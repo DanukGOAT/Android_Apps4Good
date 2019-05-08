@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -23,7 +24,7 @@ public class StudentQuestions extends AppCompatActivity {
     }
 
     public void addInfo() {
-        ArrayList<RadioButton> ja = new ArrayList<RadioButton>();
+        ArrayList<RadioButton> ja = new ArrayList<>();
         ja.add((RadioButton) findViewById(R.id.Q1answer1));
         ja.add((RadioButton) findViewById(R.id.Q1answer2));
         ja.add((RadioButton) findViewById(R.id.Q1answer3));
@@ -33,28 +34,39 @@ public class StudentQuestions extends AppCompatActivity {
         ja.add((RadioButton) findViewById(R.id.Q1answer7));
         ja.add((RadioButton) findViewById(R.id.Q1answer8));
 
-        for (int i = 1; i <= ja.size(); i++)
+        for (int i = 0; i < ja.size(); i++)
             if (ja.get(i).isChecked())
                 subjects.add(i);
 
         ja.clear();
-        ArrayList<CheckBox> ja2 = new ArrayList<CheckBox>();
+        ArrayList<CheckBox> ja2 = new ArrayList<>();
         ja2.add((CheckBox) findViewById(R.id.q2Answer1));
         ja2.add((CheckBox) findViewById(R.id.q2Answer2));
         ja2.add((CheckBox) findViewById(R.id.q2Answer3));
         ja2.add((CheckBox) findViewById(R.id.q2Answer4));
         ja2.add((CheckBox) findViewById(R.id.q2Answer5));
 
-        for (int i = 1; i <= ja2.size(); i++)
+        for (int i = 0; i < ja2.size(); i++)
             if (ja2.get(i).isChecked())
                 preferences.add(i);
     }
     public void goToTutorSelection(View v){
         addInfo();
         Intent intent = new Intent(this, tutorSelection.class);
-        intent.putExtra("student preferences", preferencesOfTutor());
-        intent.putExtra("student subjects", subjectsToTutor());
-        startActivity(intent);
+        Tutor tutt = new Tutor();
+        tutt.setSubjects(subjectsToTutor());
+        tutt.setPreferences(preferencesOfTutor());
+        intent.putExtra("student tutor", tutt);
+        if(subjectsToTutor().isEmpty())
+        {
+            Toast.makeText(this, "Enter a subject", Toast.LENGTH_SHORT).show();
+        }
+        else if(preferencesOfTutor().isEmpty())
+        {
+            Toast.makeText(this, "Enter your preferences", Toast.LENGTH_SHORT).show();
+        }
+        else
+            startActivity(intent);
     }
 
     public ArrayList<String> preferencesOfTutor(){
