@@ -41,7 +41,7 @@ public class tutorSelection extends AppCompatActivity {
     private ArrayList<String> studentPreferences = new ArrayList<>();
     private ArrayList<String> studentSubjects = new ArrayList<>();
 
-    private ArrayList<Tutor> tutorList = new ArrayList<>();
+    private ArrayList<Tutor> tutorList;
     private ArrayList<Tutor> sortedTutorList = new ArrayList<>();
 
 
@@ -54,8 +54,12 @@ public class tutorSelection extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
 
-        studentPreferences=bundle.getParcelable("student preferences");
-        studentSubjects=bundle.getParcelable("student subjects");
+        tutor=bundle.getParcelable( "student tutor");
+        studentSubjects=tutor.getSubjects();
+        studentPreferences=tutor.getPreferences();
+
+        Log.w(TAG, "subjectscheck " + studentSubjects.get(0));
+        Log.w(TAG, "preferencescheck " + studentPreferences.get(0));
         
        // int buttonStyle = R.style.button;
 
@@ -77,28 +81,28 @@ public class tutorSelection extends AppCompatActivity {
 //
 //        tutor = bundle.getParcelable("tutor object");
 
-        database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("Users");
-
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot child: dataSnapshot.getChildren()){
-                    Log.w(TAG, child.getValue(Tutor.class).toString());
-//                    Button tutorButton = new Button(tutorSelection.this);
-//                    tutorButton.setText(child.getValue(Tutor.class).getName());
-//                    tutorButtonContainer.addView(tutorButton);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.w(TAG, "Failed to read value.", databaseError.toException());
-            }
-        });
+//        database = FirebaseDatabase.getInstance();
+//        myRef = database.getReference("Users");
+//
+//        myRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                for(DataSnapshot child: dataSnapshot.getChildren()){
+//                    Log.w(TAG, child.getValue(Tutor.class).toString());
+////                    Button tutorButton = new Button(tutorSelection.this);
+////                    tutorButton.setText(child.getValue(Tutor.class).getName());
+////                    tutorButtonContainer.addView(tutorButton);
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//                Log.w(TAG, "Failed to read value.", databaseError.toException());
+//            }
+//        });
     }
 
-    private void initTutorData(){
+    public void initTutorData(){
         Log.d(TAG, "initTutorData: preparing data");
 
         database = FirebaseDatabase.getInstance();
@@ -109,10 +113,15 @@ public class tutorSelection extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot child: dataSnapshot.getChildren()){
                     Log.w(TAG, child.getValue(Tutor.class).toString());
+                    Log.w(TAG, "bruhhhh");
 //                    Button tutorButton = new Button(tutorSelection.this);
 //                    tutorButton.setText(child.getValue(Tutor.class).getName());
 //                    tutorButtonContainer.addView(tutorButton);
                     if(subjectMatch(child.getValue(Tutor.class))) {
+                        Log.w(TAG, "why isnt this working?");
+                        Log.w(TAG, "yoooo wtf "+ child.getValue(Tutor.class).toString());
+
+                        //Fix this line
                         tutorList.add(child.getValue(Tutor.class));
                     }
 
@@ -124,7 +133,7 @@ public class tutorSelection extends AppCompatActivity {
                 Log.w(TAG, "Failed to read value.", databaseError.toException());
             }
         });
-
+        Log.w(TAG, "Greg The Leg");
         sortTutors();
         for(Tutor t: sortedTutorList){
             tutorNames.add(t.getName());
@@ -141,7 +150,7 @@ public class tutorSelection extends AppCompatActivity {
         initRecyclerView();
     }
 
-    private void initRecyclerView(){
+    public void initRecyclerView(){
         Log.d(TAG, "initRecyclerView: init recyclerView");
         RecyclerView recyclerView = findViewById(R.id.recyclerv_view);
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(tutorNames,tutorSubjects,tutorTimes,tutorPreferences,this);
@@ -150,14 +159,19 @@ public class tutorSelection extends AppCompatActivity {
     }
 
     public void sortTutors(){
+        Log.w(TAG, "Greg The Leg part 2");
         boolean inMiddle=false;
         boolean firstElem=true;
+        Log.w(TAG, "Greg The Leg part 3 "+tutorList.size());
         for(Tutor t: tutorList){
+            Log.w(TAG, "Greg The Leg");
             if(firstElem){
                 sortedTutorList.add(t);
                 firstElem=false;
             }else{
+                Log.w(TAG, "Greg The Leg");
                 for(int i=0; i<sortedTutorList.size(); i++){
+                    Log.w(TAG, "Greg The Leg");
                     if(preferenceNum(t)>=preferenceNum(sortedTutorList.get(i))){
                         sortedTutorList.add(i, t);
                         i=sortedTutorList.size()+10;
@@ -172,7 +186,12 @@ public class tutorSelection extends AppCompatActivity {
     }
 
     public boolean subjectMatch(Tutor t){
-        return (t.getSubjects().contains(studentSubjects.get(0)));
+
+        if(studentSubjects==null){
+            return false;
+        }else {
+            return (t.getSubjects().contains(studentSubjects.get(0)));
+        }
     }
 
     public int preferenceNum(Tutor t){
