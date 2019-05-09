@@ -46,7 +46,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         Log.d(TAG, "onBindViewHolder: called.");
-        Log.d(TAG, "onBindViewHolder: array size");
         viewHolder.tutorName.setText(tutorNames.get(position));
         viewHolder.tutorPreference.setText(tutorPreferences.get(position));
         viewHolder.tutorSubject.setText(tutorSubjects.get(position));

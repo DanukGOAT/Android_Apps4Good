@@ -128,10 +128,16 @@ public class tutorSelection extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot child: dataSnapshot.getChildren()){
                     Log.w(TAG, child.getValue(Tutor.class).toString());
-                    if(subjectMatch(child.getValue(Tutor.class))) {
+//                    if(subjectMatch(child.getValue(Tutor.class))) {
                         tutorList.add(child.getValue(Tutor.class));
-                    }
+//                    }
 
+                }
+                for(Tutor t: tutorList){
+                    tutorNames.add(t.getName());
+                    tutorPreferences.add(t.getPreferences().toString());
+                    tutorSubjects.add(t.getSubjects().toString());
+                    tutorTimes.add(t.getTimes().toString());
                 }
             }
 
@@ -141,14 +147,9 @@ public class tutorSelection extends AppCompatActivity {
             }
         });
 
-        sortTutors();
-        for(Tutor t: sortedTutorList){
-            tutorNames.add(t.getName());
-            tutorPreferences.add(t.getPreferences().toString());
-            tutorSubjects.add(t.getSubjects().toString());
-            tutorTimes.add(t.getTimes().toString());
-        }
+//        sortTutors();
 
+        Log.d(TAG, "tutorLIst size" + tutorList.size());
         tutorNames.add("Kevin");
         tutorPreferences.add("At home, at MAMS");
         tutorSubjects.add("Math, Physics");
