@@ -25,8 +25,8 @@ import java.util.ArrayList;
 
 public class tutorSelection extends AppCompatActivity {
 
-    private DatabaseReference myRef;
-    private FirebaseDatabase database;
+//    private DatabaseReference myRef;
+//    private FirebaseDatabase database;
 
     private static final String TAG="AviIsMyFather";
 
@@ -47,52 +47,81 @@ public class tutorSelection extends AppCompatActivity {
     private Tutor tutor;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tutor_selection);
-        Log.d(TAG, "onCreate: started");
-
-        Intent intent = getIntent();
-//        Bundle bundle = intent.getExtras();
-
-        tutor = getIntent().getParcelableExtra("student tutor");
-
-//        tutor=bundle.getParcelable( "student tutor");
-        studentSubjects=tutor.getSubjects();
-        studentPreferences=tutor.getPreferences();
-
-        Log.w(TAG, "subjectscheck " + studentSubjects.get(0));
-        Log.w(TAG, "preferencescheck " + studentPreferences.get(0));
-
-        initTutorData();
-
-//        Intent intent = getIntent();
-//        Bundle bundle = intent.getExtras();
-//        tutor = bundle.getParcelable("tutor object");
-
-        database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("Users");
-
+    protected void onStart(){
+        super.onStart();
+        DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("Users");
+        Log.d(TAG, "test52");
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Log.d(TAG, "test5");
                 for(DataSnapshot child: dataSnapshot.getChildren()){
                     Log.w(TAG, child.getValue(Tutor.class).toString());
                 }
             }
 
             @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.w(TAG, "Failed to read value.", databaseError.toException());
+            }
+        });
+
+
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_tutor_selection);
+        Log.d(TAG, "onCreate: started");
+
+//        Intent intent = getIntent();
+//        Bundle bundle = intent.getExtras();
+//        Tutor tutt = getIntent().getParcelableExtra("myID");
+//        tutor = getIntent().getParcelableExtra("student tutor");
+
+//        tutor=bundle.getParcelable( "student tutor");
+//        studentSubjects=tutt.getSubjects();
+//        studentPreferences=tutt.getPreferences();
+//
+//        Log.w(TAG, "subjectscheck " + studentSubjects.get(0));
+//        Log.w(TAG, "preferencescheck " + studentPreferences.get(0));
+
+//        initTutorData();
+
+//        Intent intent = getIntent();
+//        Bundle bundle = intent.getExtras();
+//        tutor = bundle.getParcelable("tutor object");
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("Users");
+
+//        database = FirebaseDatabase.getInstance();
+//        myRef = database.getReference("Users");
+        Log.d(TAG, "tutorselectionclasscheck");
+
+        myRef.addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Log.d(TAG, "test2");
+                for(DataSnapshot child: dataSnapshot.getChildren()){
+                    Log.w(TAG, child.getValue(Tutor.class).toString());
+                }
+            }
+            @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Log.w(TAG, "Failed to read value.", databaseError.toException());
             }
         });
+        Log.d(TAG, "lmaooooo");
+
     }
 
     private void initTutorData(){
         Log.d(TAG, "initTutorData: preparing data");
 
-        database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("Users");
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("Users");
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -159,6 +188,9 @@ public class tutorSelection extends AppCompatActivity {
     }
 
     public boolean subjectMatch(Tutor t){
+        for(int i=0; i<t.getSubjects().size();i++){
+            Log.d(TAG, t.getSubjects().get(i));
+        }
         return (t.getSubjects().contains(studentSubjects.get(0)));
     }
 

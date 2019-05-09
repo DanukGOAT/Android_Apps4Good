@@ -3,6 +3,7 @@ package com.example.exampleapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -54,9 +55,16 @@ public class StudentQuestions extends AppCompatActivity {
         addInfo();
         Intent intent = new Intent(this, tutorSelection.class);
         Tutor tutt = new Tutor();
+        Log.d("YUHHHHHH", subjectsToTutor().toString());
+        Log.d("YUHHHHHH", preferencesOfTutor().toString());
         tutt.setSubjects(subjectsToTutor());
         tutt.setPreferences(preferencesOfTutor());
         intent.putExtra("student tutor", tutt);
+//
+//        Bundle bundle = new Bundle();
+//        bundle.putParcelable("myID", tutt);
+//        intent.putExtras(bundle);
+
         if(subjectsToTutor().isEmpty())
         {
             Toast.makeText(this, "Enter a subject", Toast.LENGTH_SHORT).show();

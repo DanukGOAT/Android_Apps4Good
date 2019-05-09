@@ -5,7 +5,8 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 
-public class Tutor implements Parcelable {
+public class Tutor implements Parcelable
+{
     private String name;
     private ArrayList<String> times;
     //    private String times;
@@ -18,6 +19,44 @@ public class Tutor implements Parcelable {
     private String experience="default";
     private String contactInfo="default";
 
+
+//    @Override
+//    public void writeToParcel(Parcel dest, int flags) {
+//        dest.writeString(name);
+//        dest.writeStringList(times);
+//        dest.writeStringList(subjects);
+//        dest.writeStringList(preferences);
+//        dest.writeString(blurb);
+//        dest.writeString(experience);
+//        dest.writeString(contactInfo);
+//    }
+//
+//    @Override
+//    public int describeContents() {
+//        return 0;
+//    }
+//
+//    public static final Creator<Tutor> CREATOR = new Creator<Tutor>() {
+//        @Override
+//        public Tutor createFromParcel(Parcel in) {
+//            return new Tutor(in);
+//        }
+//
+//        @Override
+//        public Tutor[] newArray(int size) {
+//            return new Tutor[size];
+//        }
+//    };
+
+    protected Tutor(Parcel in) {
+        name = in.readString();
+        times = in.createStringArrayList();
+        subjects = in.createStringArrayList();
+        preferences = in.createStringArrayList();
+        blurb = in.readString();
+        experience = in.readString();
+        contactInfo = in.readString();
+    }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
@@ -84,12 +123,12 @@ public class Tutor implements Parcelable {
 
 
 
-    protected Tutor(Parcel in) {
-        name = in.readString();
-        times = in.createStringArrayList();
-        subjects = in.createStringArrayList();
-        preferences = in.createStringArrayList();
-    }
+//    protected Tutor(Parcel in) {
+//        name = in.readString();
+//        times = in.createStringArrayList();
+//        subjects = in.createStringArrayList();
+//        preferences = in.createStringArrayList();
+//    }
 
 
 
