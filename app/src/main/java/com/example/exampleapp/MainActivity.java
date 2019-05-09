@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -49,8 +50,25 @@ public class MainActivity extends AppCompatActivity {
         startTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                TextView t = findViewById(R.id.editText);
+                final String usrcheck = t.getText().toString();
+                DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("Users");
+                myRef.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        for(DataSnapshot child: dataSnapshot.getChildren()){
+                            Log.w(TAG, child.getValue(Tutor.class).toString());
+                            if(child.getValue(Tutor.class).getName().equals(usrcheck)){
 
+                            }
+                        }
+                    }
 
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        Log.w(TAG, "Failed to read value.", databaseError.toException());
+                    }
+                });
             }
         });
     }
