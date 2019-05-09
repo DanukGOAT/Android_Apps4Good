@@ -13,6 +13,7 @@ import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -132,6 +133,9 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
                 Intent intent = new Intent(CalendarDisplay.this, CalendarDisplay.class);
                 intent.putExtra("tutor object", tutor);
                 intent.putExtra("Personal Contact Information", date);
+//                if(date.isEmpty()||startTime.isEmpty()||endTime.isEmpty()){
+//                Toast.makeText(this,"Make sure to put in a date, a start time, and an end time.", Toast.LENGTH_SHORT).show();
+//                }
                 startActivity(intent);
             }
         });
