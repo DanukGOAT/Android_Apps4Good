@@ -10,7 +10,9 @@ import android.widget.TextView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+
 public class ProfileInfo extends AppCompatActivity {
+    //Data
     private Tutor tutor = new Tutor();
     private TextView usrname;
     private TextView blurb;
@@ -27,13 +29,12 @@ public class ProfileInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_info);
 
+        //Grabs the tutor object from the intent
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
-
-
-
         tutor = bundle.getParcelable("tutor object");
 
+        //Updating data with individual tutor values
         usrname = findViewById(R.id.userName);
         blurb = findViewById(R.id.personalBlurb);
         experience = findViewById(R.id.tutorExperience);
@@ -45,6 +46,8 @@ public class ProfileInfo extends AppCompatActivity {
         Button editBut = findViewById(R.id.editButton);
         mamsPlug = findViewById(R.id.plugForMAMS);
 
+        //OnClickListeners to put blank text when the user taps on a text box so
+        //that they don't have to clear it out themselves
         usrname.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,6 +89,8 @@ public class ProfileInfo extends AppCompatActivity {
 //        if(date!=null){
 //            txtview.setText(date);
 //        }
+
+        //Sends the user back to the CalendarDisplay class
         editBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

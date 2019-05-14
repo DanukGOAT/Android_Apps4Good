@@ -74,21 +74,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
+    //Sends the user to the StudentQuestions activity
     public void studentButtonPress(View v){
         Intent intent = new Intent(this, StudentQuestions.class);
         startActivity(intent);
     }
 
-
-
+    //Sends the user to the TutorQuestions activity
     public void tutorButtonPress(View v){
         Intent intent = new Intent(this, TutorQuestions.class);
-        startActivity(intent);
-    }
-
-    public void debugButtonPress(View v){
-        Intent intent = new Intent(this, tutorSelection.class);
         startActivity(intent);
     }
 }
