@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final Intent password = new Intent(this, CalendarDisplay.class);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                         for(DataSnapshot child: dataSnapshot.getChildren()){
                             Log.w(TAG, child.getValue(Tutor.class).toString());
                             if(child.getValue(Tutor.class).getName().equals(usrcheck)){
-
+                                startActivity(password);
                             }
                         }
                     }

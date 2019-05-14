@@ -21,7 +21,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class CalendarDisplay extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
     private DatabaseReference myRef;
@@ -51,6 +54,12 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
+
+        Date c = Calendar.getInstance().getTime();
+
+
+        SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+        date = df.format(c);
 
         tutor=bundle.getParcelable("tutor object");
 
@@ -106,7 +115,7 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 date = month + "/"+ dayOfMonth+"/"+year+" ";
-                tutor.addTime(date);
+//                tutor.addTime(date);
 //                Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
 //                intent.putExtra("Personal Contact Information", date);
 //                startActivity(intent);
@@ -116,9 +125,9 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         finishedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                database = FirebaseDatabase.getInstance();
-                myRef = database.getReference("Users");
-                myRef.child(""+tutor.getUserNum()).setValue(tutor);
+//                database = FirebaseDatabase.getInstance();
+//                myRef = database.getReference("Users");
+//                myRef.child(""+tutor.getUserNum()).setValue(tutor);
                 Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
                 intent.putExtra("Personal Contact Information", date);
                 intent.putExtra("tutor object", tutor);

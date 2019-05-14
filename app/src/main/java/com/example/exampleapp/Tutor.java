@@ -4,6 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Tutor implements Parcelable
 {
@@ -20,39 +21,14 @@ public class Tutor implements Parcelable
     private String contactInfo="default";
 
 
-//    @Override
-//    public void writeToParcel(Parcel dest, int flags) {
-//        dest.writeString(name);
-//        dest.writeStringList(times);
-//        dest.writeStringList(subjects);
-//        dest.writeStringList(preferences);
-//        dest.writeString(blurb);
-//        dest.writeString(experience);
-//        dest.writeString(contactInfo);
-//    }
-//
-//    @Override
-//    public int describeContents() {
-//        return 0;
-//    }
-//
-//    public static final Creator<Tutor> CREATOR = new Creator<Tutor>() {
-//        @Override
-//        public Tutor createFromParcel(Parcel in) {
-//            return new Tutor(in);
-//        }
-//
-//        @Override
-//        public Tutor[] newArray(int size) {
-//            return new Tutor[size];
-//        }
-//    };
+
 
     protected Tutor(Parcel in) {
         name = in.readString();
         times = in.createStringArrayList();
         subjects = in.createStringArrayList();
         preferences = in.createStringArrayList();
+
         blurb = in.readString();
         experience = in.readString();
         contactInfo = in.readString();
@@ -119,19 +95,6 @@ public class Tutor implements Parcelable
     public void setContactInfo(String contactInfo) {
         this.contactInfo = contactInfo;
     }
-
-
-
-
-//    protected Tutor(Parcel in) {
-//        name = in.readString();
-//        times = in.createStringArrayList();
-//        subjects = in.createStringArrayList();
-//        preferences = in.createStringArrayList();
-//    }
-
-
-
 
     public ArrayList<String> getSubjects() {
         return subjects;
