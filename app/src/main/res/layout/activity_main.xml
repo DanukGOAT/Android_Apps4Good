@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InitPage">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/container"
@@ -64,17 +64,6 @@
                 android:textColor="#FFFFFF" />
 
         </LinearLayout>
-
-        <Button
-            android:id="@+id/debugButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="6sp"
-            android:layout_marginTop="6sp"
-            android:layout_marginRight="6sp"
-            android:onClick="debugButtonPress"
-            android:text="@string/debugButtonText" />
-
 
 
         <EditText

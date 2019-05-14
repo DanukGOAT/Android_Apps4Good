@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Test</string>
+    <string name="app_name">Tutor Finder</string>
     <string name="firstNumText">Enter first number:</string>
     <string name="inputFieldHint">enter a real number</string>
     <string name="secondNumText">Enter second number:</string>
@@ -57,4 +57,5 @@
     <string name="tutorUpcomingTimes">Upcoming appointments:\n {student name} at {time} on {date}\n {student name} at {time} on {date}</string>
     <string name="calendarTitle">Calendar Setup</string>
     <string name="tutorSelectionTitleText">View and Select Tutors</string>
+    <string name="welcomeText">Profile Info</string>
 </resources>
