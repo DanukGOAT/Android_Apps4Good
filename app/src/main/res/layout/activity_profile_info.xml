@@ -26,7 +26,7 @@
             android:paddingTop="10sp"
             android:paddingRight="6sp"
             android:paddingBottom="10sp"
-            android:text="Profile Info"
+            android:text="@string/welcomeText"
             android:textColor="#062C5B"
             android:textSize="36sp"
             app:fontFamily="sans-serif-light" />
@@ -121,7 +121,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_button"
-            android:text="Finish"
+            android:text="@string/editButtonText"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>
