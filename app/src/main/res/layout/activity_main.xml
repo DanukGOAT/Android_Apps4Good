@@ -65,31 +65,20 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/debugButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="6sp"
-            android:layout_marginTop="6sp"
-            android:layout_marginRight="6sp"
-            android:onClick="debugButtonPress"
-            android:text="@string/debugButtonText" />
-
-
 
         <EditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="If you are a returning tutor, enter your username here"
-            android:background="@drawable/bg_answer"
             android:layout_marginHorizontal="10sp"
             android:layout_marginTop="30sp"
+            android:background="@drawable/bg_answer"
+            android:ems="10"
+            android:hint="If you are a returning tutor, enter your username here"
+            android:inputType="textPersonName"
             android:padding="5sp"
-            android:textSize="16sp"
-            android:textColor="#777777"/>
+            android:textColor="#777777"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button2"

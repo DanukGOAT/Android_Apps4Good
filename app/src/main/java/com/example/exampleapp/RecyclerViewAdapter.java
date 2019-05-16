@@ -16,18 +16,19 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
     private static final String TAG = "RecyclerViewAdapter";
 
-    private ArrayList<String> tutorNames = new ArrayList<>();
-    private ArrayList<String> tutorSubjects = new ArrayList<>();
-    private ArrayList<String> tutorTimes = new ArrayList<>();
-    private ArrayList<String> tutorPreferences = new ArrayList<>();
+    private ArrayList<String> tutorNames;
+    private ArrayList<ArrayList<String>> tutorSubjects;
+    private ArrayList<ArrayList<String>> tutorTimes;
+    private ArrayList<ArrayList<String>> tutorPreferences;
     private Context context;
 
-    public RecyclerViewAdapter(ArrayList<String> ntutorNames, ArrayList<String> ntutorSubjects, ArrayList<String> ntutorTimes, ArrayList<String> ntutorPreferences, Context ncontext){
+    public RecyclerViewAdapter(ArrayList<String> ntutorNames, ArrayList<ArrayList<String>> ntutorSubjects, ArrayList<ArrayList<String>> ntutorTimes, ArrayList<ArrayList<String>> ntutorPreferences, Context ncontext){
         tutorNames = ntutorNames;
         tutorSubjects = ntutorSubjects;
         tutorTimes = ntutorTimes;
@@ -47,9 +48,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         Log.d(TAG, "onBindViewHolder: called.");
         viewHolder.tutorName.setText(tutorNames.get(position));
-        viewHolder.tutorPreference.setText(tutorPreferences.get(position));
-        viewHolder.tutorSubject.setText(tutorSubjects.get(position));
-        viewHolder.tutorTime.setText(tutorTimes.get(position));
+        viewHolder.tutorPreference.setText(tutorPreferences.get(position).toString());
+        viewHolder.tutorSubject.setText(tutorSubjects.get(position).toString());
+        viewHolder.tutorTime.setText(tutorTimes.get(position).toString());
 
         viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +60,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 Toast.makeText(context, tutorNames.get(position), Toast.LENGTH_SHORT).show();
 
                 Tutor tutor = new Tutor();
+                tutor.setName(tutorNames.get(position));
+                tutor.setPreferences(tutorPreferences.get(position));
+                tutor.setSubjects(tutorSubjects.get(position));
+                tutor.setTimes(tutorTimes.get(position));
                 Intent intent = new Intent(context, studentTutorDisplay.class);
                 intent.putExtra("parcel_data", tutor);
                 context.startActivity(intent);

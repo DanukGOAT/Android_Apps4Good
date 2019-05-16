@@ -96,7 +96,7 @@ public class ProfileInfo extends AppCompatActivity {
                 database = FirebaseDatabase.getInstance();
                 myRef = database.getReference("Users");
                 myRef.child(""+tutor.getName()).setValue(tutor);
-                Intent intent = new Intent(ProfileInfo.this, CalendarDisplay.class);
+                Intent intent = new Intent(ProfileInfo.this, MainActivity.class);
                 intent.putExtra("tutor object", tutor);
                 startActivity(intent);
             }

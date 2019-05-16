@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
-        Button startTimeButton = (Button) findViewById(R.id.button2);
-        startTimeButton.setOnClickListener(new View.OnClickListener() {
+        Button passbutton = (Button) findViewById(R.id.button2);
+        passbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TextView t = findViewById(R.id.editText);
@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                         for(DataSnapshot child: dataSnapshot.getChildren()){
                             Log.w(TAG, child.getValue(Tutor.class).toString());
                             if(child.getValue(Tutor.class).getName().equals(usrcheck)){
+                                password.putExtra("tutor object", child.getValue(Tutor.class));
                                 startActivity(password);
                             }
                         }

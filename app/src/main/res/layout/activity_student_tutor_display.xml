@@ -123,8 +123,7 @@
             android:background="@drawable/bg_answer"
             android:ems="10"
             android:inputType="textPersonName"
-            android:padding="5dp"
-            android:text="Insert dates here" />
+            android:padding="5dp" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

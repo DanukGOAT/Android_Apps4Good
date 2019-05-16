@@ -103,6 +103,7 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         startTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 isStartTime = false;
                 DialogFragment timePicker = new TimePickerFragment();
                 timePicker.show(getSupportFragmentManager(), "time picker");

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -63,12 +64,15 @@ public class TutorQuestions extends AppCompatActivity {
 
         tutor.setPreferences(preferencesOfTutor());
         tutor.setSubjects(subjectsToTutor());
-        Log.w("Preferences", "");
-        Intent intent = new Intent(this, CalendarDisplay.class);
-        intent.putExtra("tutor object", tutor);
 
-
-        startActivity(intent);
+        if(tutor.getSubjects().size()==0 || tutor.getPreferences().size()==0){
+            Toast.makeText(this, "Please select at least one subject and one preference", Toast.LENGTH_SHORT).show();
+        }else {
+            Log.w("Preferences", "");
+            Intent intent = new Intent(this, CalendarDisplay.class);
+            intent.putExtra("tutor object", tutor);
+            startActivity(intent);
+        }
     }
 
     public ArrayList<String> subjectsToTutor(){

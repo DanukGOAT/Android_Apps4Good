@@ -28,14 +28,14 @@ public class tutorSelection extends AppCompatActivity {
 
     //vars
     private ArrayList<String> tutorNames = new ArrayList<>();
-    private ArrayList<String> tutorSubjects = new ArrayList<>();
-    private ArrayList<String> tutorTimes = new ArrayList<>();
-    private ArrayList<String> tutorPreferences = new ArrayList<>();
+    private ArrayList<ArrayList<String>> tutorSubjects = new ArrayList<>();
+    private ArrayList<ArrayList<String>> tutorTimes = new ArrayList<>();
+    private ArrayList<ArrayList<String>> tutorPreferences = new ArrayList<>();
 
     private ArrayList<String> studentPreferences = new ArrayList<>();
     private ArrayList<String> studentSubjects = new ArrayList<>();
 
-    private ArrayList<Tutor> tutorList = new ArrayList<>();
+    private ArrayList<Tutor> tutorList = new ArrayList<Tutor>();
     private ArrayList<Tutor> sortedTutorList = new ArrayList<>();
 
     private Tutor tutor;
@@ -43,22 +43,23 @@ public class tutorSelection extends AppCompatActivity {
     @Override
     protected void onStart(){
         super.onStart();
-        DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("Users");
-        Log.d(TAG, "test52");
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                Log.d(TAG, "test5");
-                for(DataSnapshot child: dataSnapshot.getChildren()){
-                    Log.w(TAG, child.getValue(Tutor.class).toString());
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Log.w(TAG, "Failed to read value.", databaseError.toException());
-            }
-        });
+//        DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("Users");
+//        Log.d(TAG, "test52");
+//        myRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                Log.d(TAG, "test5");
+//                for(DataSnapshot child: dataSnapshot.getChildren()){
+//                    Log.w(TAG, child.getValue(Tutor.class).toString());
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//                Log.w(TAG, "Failed to read value.", databaseError.toException());
+//            }
+//        });
+        initTutorData();
 
 
     }
@@ -86,36 +87,35 @@ public class tutorSelection extends AppCompatActivity {
 //        Intent intent = getIntent();
 //        Bundle bundle = intent.getExtras();
 //        tutor = bundle.getParcelable("tutor object");
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Users");
+//        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//        DatabaseReference myRef = database.getReference("Users");
 
 //        database = FirebaseDatabase.getInstance();
 //        myRef = database.getReference("Users");
         Log.d(TAG, "tutorselectionclasscheck");
 
-        myRef.addValueEventListener(new ValueEventListener() {
-
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Log.d(TAG, "test2");
-                for(DataSnapshot child: dataSnapshot.getChildren()){
-                    Log.w(TAG, child.getValue(Tutor.class).toString());
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.w(TAG, "Failed to read value.", databaseError.toException());
-            }
-        });
-        Log.d(TAG, "lmaooooo");
+//        myRef.addValueEventListener(new ValueEventListener() {
+//
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                Log.d(TAG, "test2");
+//                for(DataSnapshot child: dataSnapshot.getChildren()){
+//                    Log.w(TAG, child.getValue(Tutor.class).toString());
+//                }
+//            }
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//                Log.w(TAG, "Failed to read value.", databaseError.toException());
+//            }
+//        });
+//        Log.d(TAG, "lmaooooo");
 
     }
 
     private void initTutorData(){
         Log.d(TAG, "initTutorData: preparing data");
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Users");
+        DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("Users");
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -128,10 +128,11 @@ public class tutorSelection extends AppCompatActivity {
 
                 }
                 for(Tutor t: tutorList){
+                    Log.w(TAG, ""+tutorList.size());
                     tutorNames.add(t.getName());
-                    tutorPreferences.add(t.getPreferences().toString());
-                    tutorSubjects.add(t.getSubjects().toString());
-                    tutorTimes.add(t.getTimes().toString());
+                    tutorPreferences.add(t.getPreferences());
+                    tutorSubjects.add(t.getSubjects());
+                    tutorTimes.add(t.getTimes());
                 }
             }
 
@@ -145,9 +146,9 @@ public class tutorSelection extends AppCompatActivity {
 
         Log.d(TAG, "tutorLIst size" + tutorList.size());
         tutorNames.add("Kevin");
-        tutorPreferences.add("At home, at MAMS");
-        tutorSubjects.add("Math, Physics");
-        tutorTimes.add("8:00 PM Monday, 9:00PM Tuesday");
+        tutorPreferences.add(new ArrayList<String>());
+        tutorSubjects.add(new ArrayList<String>());
+        tutorTimes.add(new ArrayList<String>());
 
         initRecyclerView();
     }
