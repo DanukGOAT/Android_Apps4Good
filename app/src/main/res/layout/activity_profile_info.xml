@@ -66,29 +66,27 @@
             android:inputType="number"
             android:padding="5dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/subjects"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_answer"
             android:ems="10"
-            android:importantForAutofill="no"
-            android:inputType="textMultiLine"
             android:padding="5dp"
-            android:text="Insert teachable subjects" />
+            android:text="@string/whereText"
+            android:textSize="18sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/where"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_answer"
             android:ems="10"
-            android:importantForAutofill="no"
-            android:inputType="textMultiLine"
             android:padding="5dp"
-            android:text="@string/whereText" />
+            android:text="@string/whereText"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/plugForMAMS"

@@ -64,7 +64,7 @@ public class tutorSelection extends AppCompatActivity {
 
         tutor = getIntent().getParcelableExtra("student tutor");
         Log.w("yessir", tutor.toString());
-        subject=tutor.getSubjects().get(0);
+        subject=tutor.getSubjects().get(tutor.getSubjects().size()-1);
         Log.w("listen", subject);
         tutorList.clear();
         tutorNames.clear();
@@ -139,7 +139,8 @@ public class tutorSelection extends AppCompatActivity {
                     }
 
                 }
-                for(Tutor t: tutorList){
+                sortTutors();
+                for(Tutor t: sortedTutorList){
                     Log.w("tutorlist size", ""+tutorList.size());
                     tutorNames.add(t.getName());
                     tutorPreferences.add(t.getPreferences());

@@ -34,6 +34,7 @@ public class StudentQuestions extends AppCompatActivity {
         ja.add((RadioButton) findViewById(R.id.Q1answer6));
         ja.add((RadioButton) findViewById(R.id.Q1answer7));
         ja.add((RadioButton) findViewById(R.id.Q1answer8));
+        subjects.clear();
 
         for (int i = 0; i < ja.size(); i++)
             if (ja.get(i).isChecked())
@@ -47,9 +48,13 @@ public class StudentQuestions extends AppCompatActivity {
         ja2.add((CheckBox) findViewById(R.id.q2Answer4));
         ja2.add((CheckBox) findViewById(R.id.q2Answer5));
 
+        preferences.clear();
+
         for (int i = 0; i < ja2.size(); i++)
             if (ja2.get(i).isChecked())
                 preferences.add(i);
+
+
     }
     public void goToTutorSelection(View v){
         addInfo();

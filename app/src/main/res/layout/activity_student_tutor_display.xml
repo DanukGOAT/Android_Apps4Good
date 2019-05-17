@@ -39,7 +39,8 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:padding="5dp"
-            android:text="@string/userNameText" />
+            android:text="@string/userNameText"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/personalBlurb"
@@ -51,7 +52,8 @@
             android:importantForAutofill="no"
             android:inputType="textMultiLine"
             android:padding="5dp"
-            android:text="@string/personalBlurbText" />
+            android:text="@string/personalBlurbText"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tutorExperience"
@@ -63,7 +65,8 @@
             android:importantForAutofill="no"
             android:inputType="textMultiLine"
             android:padding="5dp"
-            android:text="@string/tutorExperienceText" />
+            android:text="@string/tutorExperienceText"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/subjects"
@@ -75,7 +78,8 @@
             android:importantForAutofill="no"
             android:inputType="textMultiLine"
             android:padding="5dp"
-            android:text="Insert teachable subjects" />
+            android:text="Insert teachable subjects"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/where"
@@ -87,7 +91,8 @@
             android:importantForAutofill="no"
             android:inputType="textMultiLine"
             android:padding="5dp"
-            android:text="@string/whereText" />
+            android:text="@string/whereText"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/plugForMAMS"
@@ -100,6 +105,7 @@
             android:inputType="textMultiLine"
             android:padding="5dp"
             android:text="@string/plugForMAMSText"
+            android:textSize="18sp"
             tools:text="https://www.massacademy.org/" />
 
         <TextView
@@ -112,7 +118,8 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:padding="5dp"
-            android:text="@string/personalContactInfoText" />
+            android:text="@string/personalContactInfoText"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/timeDisplay"
@@ -123,7 +130,8 @@
             android:background="@drawable/bg_answer"
             android:ems="10"
             android:inputType="textPersonName"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:textSize="18sp" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
