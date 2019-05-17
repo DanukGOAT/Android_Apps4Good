@@ -4,13 +4,12 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Tutor implements Parcelable
 {
     private String name;
     private ArrayList<String> times;
-    //    private String times;
+
     private static int userNum=1;
     private ArrayList<String> subjects;
     private ArrayList<String> preferences;
@@ -21,14 +20,11 @@ public class Tutor implements Parcelable
     private String contactInfo="default";
 
 
-
-
     protected Tutor(Parcel in) {
         name = in.readString();
         times = in.createStringArrayList();
         subjects = in.createStringArrayList();
         preferences = in.createStringArrayList();
-
         blurb = in.readString();
         experience = in.readString();
         contactInfo = in.readString();

@@ -40,6 +40,8 @@ public class tutorSelection extends AppCompatActivity {
 
     private Tutor tutor;
 
+    private static String subject;
+
     @Override
     protected void onStart(){
         super.onStart();
@@ -59,6 +61,16 @@ public class tutorSelection extends AppCompatActivity {
 //                Log.w(TAG, "Failed to read value.", databaseError.toException());
 //            }
 //        });
+
+        tutor = getIntent().getParcelableExtra("student tutor");
+        Log.w("yessir", tutor.toString());
+        subject=tutor.getSubjects().get(0);
+        Log.w("listen", subject);
+        tutorList.clear();
+        tutorNames.clear();
+        tutorPreferences.clear();
+        tutorSubjects.clear();
+        tutorTimes.clear();
         initTutorData();
 
 
@@ -73,7 +85,7 @@ public class tutorSelection extends AppCompatActivity {
 //        Intent intent = getIntent();
 //        Bundle bundle = intent.getExtras();
 //        Tutor tutt = getIntent().getParcelableExtra("myID");
-//        tutor = getIntent().getParcelableExtra("student tutor");
+
 
 //        tutor=bundle.getParcelable( "student tutor");
 //        studentSubjects=tutt.getSubjects();
@@ -122,18 +134,19 @@ public class tutorSelection extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot child: dataSnapshot.getChildren()){
                     Log.w(TAG, child.getValue(Tutor.class).toString());
-//                    if(subjectMatch(child.getValue(Tutor.class))) {
+                    if(subjectMatch(child.getValue(Tutor.class))) {
                         tutorList.add(child.getValue(Tutor.class));
-//                    }
+                    }
 
                 }
                 for(Tutor t: tutorList){
-                    Log.w(TAG, ""+tutorList.size());
+                    Log.w("tutorlist size", ""+tutorList.size());
                     tutorNames.add(t.getName());
                     tutorPreferences.add(t.getPreferences());
                     tutorSubjects.add(t.getSubjects());
                     tutorTimes.add(t.getTimes());
                 }
+                initRecyclerView();
             }
 
             @Override
@@ -144,13 +157,13 @@ public class tutorSelection extends AppCompatActivity {
 
 //        sortTutors();
 
-        Log.d(TAG, "tutorLIst size" + tutorList.size());
-        tutorNames.add("Kevin");
-        tutorPreferences.add(new ArrayList<String>());
-        tutorSubjects.add(new ArrayList<String>());
-        tutorTimes.add(new ArrayList<String>());
 
-        initRecyclerView();
+//        tutorNames.add("Kevin");
+//        tutorPreferences.add(new ArrayList<String>());
+//        tutorSubjects.add(new ArrayList<String>());
+//        tutorTimes.add(new ArrayList<String>());
+
+
     }
 
     private void initRecyclerView(){
@@ -184,10 +197,15 @@ public class tutorSelection extends AppCompatActivity {
     }
 
     public boolean subjectMatch(Tutor t){
+        boolean b=false;
         for(int i=0; i<t.getSubjects().size();i++){
-            Log.d(TAG, t.getSubjects().get(i));
+            Log.d("bruvhvhvhvhvvh", t.getSubjects().get(i));
+            Log.d("bruvhvhvhvhvvh", subject);
+            if(t.getSubjects().get(i).equals(subject)){
+                b=true;
+            }
         }
-        return (t.getSubjects().contains(studentSubjects.get(0)));
+        return b;
     }
 
     public int preferenceNum(Tutor t){

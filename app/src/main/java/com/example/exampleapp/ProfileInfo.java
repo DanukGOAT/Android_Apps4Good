@@ -48,40 +48,40 @@ public class ProfileInfo extends AppCompatActivity {
 
         //OnClickListeners to put blank text when the user taps on a text box so
         //that they don't have to clear it out themselves
-        usrname.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                usrname.setText("");
-            }
-        });
-
-        blurb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                blurb.setText("");
-            }
-        });
-
-        experience.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                experience.setText("");
-            }
-        });
-
-        contactInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                contactInfo.setText("");
-            }
-        });
-
-        mamsPlug.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mamsPlug.setText("https://www.massacademy.org/");
-            }
-        });
+//        usrname.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                usrname.setText("");
+//            }
+//        });
+//
+//        blurb.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                blurb.setText("");
+//            }
+//        });
+//
+//        experience.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                experience.setText("");
+//            }
+//        });
+//
+//        contactInfo.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                contactInfo.setText("");
+//            }
+//        });
+//
+//        mamsPlug.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                mamsPlug.setText("https://www.massacademy.org/");
+//            }
+//        });
 
 
 
