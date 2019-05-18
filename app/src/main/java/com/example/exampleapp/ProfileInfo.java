@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -94,6 +95,9 @@ public class ProfileInfo extends AppCompatActivity {
         editBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(usrname.getText().toString().isEmpty()||blurb.getText().toString().isEmpty()||experience.getText().toString().isEmpty()||contactInfo.getText().toString().isEmpty()){
+                    Toast.makeText(ProfileInfo.this,"Please fill in information for all fields.", Toast.LENGTH_SHORT).show();
+                }else{
                 tutor.setName(usrname.getText().toString());
                 tutor.setBlurb(blurb.getText().toString());
                 tutor.setExperience(experience.getText().toString());
@@ -103,7 +107,7 @@ public class ProfileInfo extends AppCompatActivity {
                 myRef.child(""+tutor.getName()).setValue(tutor);
                 Intent intent = new Intent(ProfileInfo.this, MainActivity.class);
                 intent.putExtra("tutor object", tutor);
-                startActivity(intent);
+                startActivity(intent);}
             }
         });
     }
