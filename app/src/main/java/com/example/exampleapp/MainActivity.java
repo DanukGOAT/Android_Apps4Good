@@ -15,6 +15,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+/**
+ * Initial page with choice for tutor or student
+ */
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG="MainActivity";
@@ -37,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
                 for(DataSnapshot child: dataSnapshot.getChildren()){
                     child.getValue();
                 }
-//                String value = dataSnapshot.getValue(String.class);
-//                Log.d(TAG, "Value is: " + value);
             }
 
             @Override
@@ -47,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
+
+        /**
+         * If a username exists in database, the user is sent straight to calendar display
+         */
         Button passbutton = (Button) findViewById(R.id.button2);
         passbutton.setOnClickListener(new View.OnClickListener() {
             @Override
