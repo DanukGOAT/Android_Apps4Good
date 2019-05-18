@@ -109,10 +109,14 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
 //                database = FirebaseDatabase.getInstance();
 //                myRef = database.getReference("Users");
 //                myRef.child(""+tutor.getUserNum()).setValue(tutor);
-                Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
-                intent.putExtra("Personal Contact Information", date);
-                intent.putExtra("tutor object", tutor);
-                startActivity(intent);
+                if(date.isEmpty()||startTime.isEmpty()||endTime.isEmpty()){
+                    Toast.makeText(CalendarDisplay.this, "Make sure to put in a date, a start time, and an end time.", Toast.LENGTH_SHORT).show();
+                }else {
+                    Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
+                    intent.putExtra("Personal Contact Information", date);
+                    intent.putExtra("tutor object", tutor);
+                    startActivity(intent);
+                }
             }
         });
         Button addTimeButton = findViewById(R.id.addTimeButton);
@@ -129,13 +133,15 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
                 }
 
 
-                Intent intent = new Intent(CalendarDisplay.this, CalendarDisplay.class);
-                intent.putExtra("tutor object", tutor);
-                intent.putExtra("Personal Contact Information", date);
+
                 if(date.isEmpty()||startTime.isEmpty()||endTime.isEmpty()){
                     Toast.makeText(CalendarDisplay.this, "Make sure to put in a date, a start time, and an end time.", Toast.LENGTH_SHORT).show();
+                }else{
+                    Intent intent = new Intent(CalendarDisplay.this, CalendarDisplay.class);
+                    intent.putExtra("tutor object", tutor);
+                    intent.putExtra("Personal Contact Information", date);
+                    startActivity(intent);
                 }
-                startActivity(intent);
             }
         });
 
