@@ -25,6 +25,10 @@ public class ProfileInfo extends AppCompatActivity {
     private DatabaseReference myRef;
     private FirebaseDatabase database;
 
+    /**
+     * Sets profile info for tutor
+     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,50 +50,6 @@ public class ProfileInfo extends AppCompatActivity {
         preferences.setText(tutor.getPreferences().toString());
         Button editBut = findViewById(R.id.editButton);
         mamsPlug = findViewById(R.id.plugForMAMS);
-
-        //OnClickListeners to put blank text when the user taps on a text box so
-        //that they don't have to clear it out themselves
-//        usrname.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                usrname.setText("");
-//            }
-//        });
-//
-//        blurb.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                blurb.setText("");
-//            }
-//        });
-//
-//        experience.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                experience.setText("");
-//            }
-//        });
-//
-//        contactInfo.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                contactInfo.setText("");
-//            }
-//        });
-//
-//        mamsPlug.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mamsPlug.setText("https://www.massacademy.org/");
-//            }
-//        });
-
-
-
-//        String date = getIntent().getStringExtra("Personal Contact ");
-//        if(date!=null){
-//            txtview.setText(date);
-//        }
 
         //Sends the user back to the CalendarDisplay class
         editBut.setOnClickListener(new View.OnClickListener() {
