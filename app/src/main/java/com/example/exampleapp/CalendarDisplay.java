@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -139,7 +140,16 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         addTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tutor.addTime(date + " * " + startTime + " "+ endTime);
+                ArrayList<CheckBox> ja = new ArrayList<CheckBox>();
+                ja.add((CheckBox) findViewById(R.id.weeklyCheckBox));
+
+                if (ja.get(0).isChecked()) {
+                    tutor.addTime(date + " * " + startTime + " "+ endTime + " weekly");
+                }else{
+                    tutor.addTime(date + " * " + startTime + " "+ endTime);
+                }
+
+
                 Intent intent = new Intent(CalendarDisplay.this, CalendarDisplay.class);
                 intent.putExtra("tutor object", tutor);
                 intent.putExtra("Personal Contact Information", date);
