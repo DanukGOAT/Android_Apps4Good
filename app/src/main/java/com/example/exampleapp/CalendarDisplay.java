@@ -62,16 +62,15 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
 
         Date c = Calendar.getInstance().getTime();
 
+
         SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
         date = df.format(c);
 
         tutor=bundle.getParcelable("tutor object");
 
-        /**
-         * Onclick of the end time button, the timepicker fragment is opened
-         */
         Button endTimeButton = (Button) findViewById(R.id.endTimeButton);
         endTimeButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 isStartTime = true;
@@ -80,9 +79,6 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
             }
         });
 
-        /**
-         * Onclick of the start time button, the timepicker fragment is opened
-         */
         Button startTimeButton = (Button) findViewById(R.id.startTimeButton);
         startTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,33 +92,33 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
 
         CalendarView calendarView = findViewById(R.id.Calendarr);
 
-        /**
-         * This method updates the date
-         */
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 date = month + "/"+ dayOfMonth+"/"+year+" ";
+//                tutor.addTime(date);
+//                Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
+//                intent.putExtra("Personal Contact Information", date);
+//                startActivity(intent);
             }
         });
-
-        /**
-         * Onclick of the finish button, the data collected thus far is passed to the profile info class
-         */
         Button finishedButton = findViewById(R.id.finishedButton);
         finishedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
-                intent.putExtra("Personal Contact Information", date);
-                intent.putExtra("tutor object", tutor);
-                startActivity(intent);
+//                database = FirebaseDatabase.getInstance();
+//                myRef = database.getReference("Users");
+//                myRef.child(""+tutor.getUserNum()).setValue(tutor);
+                if(date.isEmpty()||startTime.isEmpty()||endTime.isEmpty()){
+                    Toast.makeText(CalendarDisplay.this, "Make sure to put in a date, a start time, and an end time.", Toast.LENGTH_SHORT).show();
+                }else {
+                    Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
+                    intent.putExtra("Personal Contact Information", date);
+                    intent.putExtra("tutor object", tutor);
+                    startActivity(intent);
+                }
             }
         });
-
-        /**
-         * Onclick of the add time button, the date, along with the time is added to the tutor variable
-         */
         Button addTimeButton = findViewById(R.id.addTimeButton);
         addTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,21 +133,20 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
                 }
 
 
-                Intent intent = new Intent(CalendarDisplay.this, CalendarDisplay.class);
-                intent.putExtra("tutor object", tutor);
-                intent.putExtra("Personal Contact Information", date);
+
                 if(date.isEmpty()||startTime.isEmpty()||endTime.isEmpty()){
                     Toast.makeText(CalendarDisplay.this, "Make sure to put in a date, a start time, and an end time.", Toast.LENGTH_SHORT).show();
+                }else{
+                    Intent intent = new Intent(CalendarDisplay.this, CalendarDisplay.class);
+                    intent.putExtra("tutor object", tutor);
+                    intent.putExtra("Personal Contact Information", date);
+                    startActivity(intent);
                 }
-                startActivity(intent);
             }
         });
 
     }
 
-    /**
-     * Converts timepicker data to usable/readable dates and times
-     */
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
 
         if(isStartTime)
