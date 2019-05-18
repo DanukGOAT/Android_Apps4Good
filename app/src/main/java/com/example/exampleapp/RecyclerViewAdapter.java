@@ -27,7 +27,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private ArrayList<ArrayList<String>> tutorTimes;
     private ArrayList<ArrayList<String>> tutorPreferences;
     private Context context;
-
+    /**
+     * Initializes the RecyclerView for tutorselection
+     */
     public RecyclerViewAdapter(ArrayList<String> ntutorNames, ArrayList<ArrayList<String>> ntutorSubjects, ArrayList<ArrayList<String>> ntutorTimes, ArrayList<ArrayList<String>> ntutorPreferences, Context ncontext){
         tutorNames = ntutorNames;
         tutorSubjects = ntutorSubjects;
@@ -44,6 +46,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return holder;
     }
 
+    /**
+     * Puts data in the card, and sets a clicklistener
+     */
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         Log.d(TAG, "onBindViewHolder: called.");
@@ -76,6 +81,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return tutorNames.size();
     }
 
+    /**
+     * Viewholder to set up interface xml
+     */
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView tutorName;
