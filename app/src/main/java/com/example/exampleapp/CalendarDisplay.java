@@ -68,6 +68,9 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
 
         tutor=bundle.getParcelable("tutor object");
 
+        /**
+         * Sets end time for session with timepickerfragment
+         */
         Button endTimeButton = (Button) findViewById(R.id.endTimeButton);
         endTimeButton.setOnClickListener(new View.OnClickListener() {
 
@@ -79,6 +82,9 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
             }
         });
 
+        /**
+         * Sets start time for session with timepickerfragment
+         */
         Button startTimeButton = (Button) findViewById(R.id.startTimeButton);
         startTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,19 +102,16 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 date = month + "/"+ dayOfMonth+"/"+year+" ";
-//                tutor.addTime(date);
-//                Intent intent = new Intent(CalendarDisplay.this, ProfileInfo.class);
-//                intent.putExtra("Personal Contact Information", date);
-//                startActivity(intent);
             }
         });
+
+        /**
+         * Once finished button is pressed, all data thus far is put into a parcelable and passed to profile info in a tutor object
+         */
         Button finishedButton = findViewById(R.id.finishedButton);
         finishedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                database = FirebaseDatabase.getInstance();
-//                myRef = database.getReference("Users");
-//                myRef.child(""+tutor.getUserNum()).setValue(tutor);
                 if(date.isEmpty()||startTime.isEmpty()||endTime.isEmpty()){
                     Toast.makeText(CalendarDisplay.this, "Make sure to put in a date, a start time, and an end time.", Toast.LENGTH_SHORT).show();
                 }else {
@@ -119,6 +122,10 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
                 }
             }
         });
+
+        /**
+         * Adds times and dates which are selected
+         */
         Button addTimeButton = findViewById(R.id.addTimeButton);
         addTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,6 +154,9 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
 
     }
 
+    /**
+     * Convers timepicker data into a readable format
+     */
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
 
         if(isStartTime)
