@@ -32,13 +32,13 @@ public class TutorQuestions extends AppCompatActivity {
         ja.add((CheckBox) findViewById(R.id.Q1Answer6));
         ja.add((CheckBox) findViewById(R.id.Q1Answer7));
         ja.add((CheckBox) findViewById(R.id.Q1Answer8));
-
+        subjects.clear();
         for (int i = 0; i < ja.size(); i++) {
             if (ja.get(i).isChecked()) {
                 subjects.add(i);
             }
         }
-
+        preferences.clear();
         ja.clear();
         ja.add((CheckBox) findViewById(R.id.Q2Answer1));
         ja.add((CheckBox) findViewById(R.id.Q2Answer2));
