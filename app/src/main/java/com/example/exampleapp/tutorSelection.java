@@ -19,14 +19,9 @@ import java.util.ArrayList;
 
 public class tutorSelection extends AppCompatActivity {
 
-//    private DatabaseReference myRef;
-//    private FirebaseDatabase database;
-
     private static final String TAG="AviIsMyFather";
 
-//    private Tutor tutor = new Tutor();
-
-    //vars
+    //variables
     private ArrayList<String> tutorNames = new ArrayList<>();
     private ArrayList<ArrayList<String>> tutorSubjects = new ArrayList<>();
     private ArrayList<ArrayList<String>> tutorTimes = new ArrayList<>();
@@ -45,23 +40,6 @@ public class tutorSelection extends AppCompatActivity {
     @Override
     protected void onStart(){
         super.onStart();
-//        DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("Users");
-//        Log.d(TAG, "test52");
-//        myRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                Log.d(TAG, "test5");
-//                for(DataSnapshot child: dataSnapshot.getChildren()){
-//                    Log.w(TAG, child.getValue(Tutor.class).toString());
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//                Log.w(TAG, "Failed to read value.", databaseError.toException());
-//            }
-//        });
-
         tutor = getIntent().getParcelableExtra("student tutor");
         Log.w("yessir", tutor.toString());
         subject=tutor.getSubjects().get(tutor.getSubjects().size()-1);
@@ -73,8 +51,6 @@ public class tutorSelection extends AppCompatActivity {
         tutorSubjects.clear();
         tutorTimes.clear();
         initTutorData();
-
-
     }
 
     @Override
@@ -82,47 +58,7 @@ public class tutorSelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutor_selection);
         Log.d(TAG, "onCreate: started");
-
-//        Intent intent = getIntent();
-//        Bundle bundle = intent.getExtras();
-//        Tutor tutt = getIntent().getParcelableExtra("myID");
-
-
-//        tutor=bundle.getParcelable( "student tutor");
-//        studentSubjects=tutt.getSubjects();
-//        studentPreferences=tutt.getPreferences();
-//
-//        Log.w(TAG, "subjectscheck " + studentSubjects.get(0));
-//        Log.w(TAG, "preferencescheck " + studentPreferences.get(0));
-
-//        initTutorData();
-
-//        Intent intent = getIntent();
-//        Bundle bundle = intent.getExtras();
-//        tutor = bundle.getParcelable("tutor object");
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference myRef = database.getReference("Users");
-
-//        database = FirebaseDatabase.getInstance();
-//        myRef = database.getReference("Users");
         Log.d(TAG, "tutorselectionclasscheck");
-
-//        myRef.addValueEventListener(new ValueEventListener() {
-//
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                Log.d(TAG, "test2");
-//                for(DataSnapshot child: dataSnapshot.getChildren()){
-//                    Log.w(TAG, child.getValue(Tutor.class).toString());
-//                }
-//            }
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//                Log.w(TAG, "Failed to read value.", databaseError.toException());
-//            }
-//        });
-//        Log.d(TAG, "lmaooooo");
-
     }
 
     private void initTutorData(){
@@ -156,15 +92,6 @@ public class tutorSelection extends AppCompatActivity {
                 Log.w(TAG, "Failed to read value.", databaseError.toException());
             }
         });
-
-//        sortTutors();
-
-
-//        tutorNames.add("Kevin");
-//        tutorPreferences.add(new ArrayList<String>());
-//        tutorSubjects.add(new ArrayList<String>());
-//        tutorTimes.add(new ArrayList<String>());
-
 
     }
 

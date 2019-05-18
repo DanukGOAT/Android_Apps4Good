@@ -27,6 +27,10 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * Displays the calendar and timepickers for the tutors to select from
+ */
+
 public class CalendarDisplay extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
     private DatabaseReference myRef;
     private FirebaseDatabase database;
@@ -63,31 +67,6 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
         date = df.format(c);
 
         tutor=bundle.getParcelable("tutor object");
-
-       // tutor.otherTutor(bundle.getParcelable("tutor object"));
-
-
-
-
-//        myRef.setValue("defaultUser");
-//        database = FirebaseDatabase.getInstance();
-//        myRef = database.getReference("Users");
-//        myRef.child("defaultUser").setValue(tutor);
-//
-//        myRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                for(DataSnapshot child: dataSnapshot.getChildren()){
-//                    Log.w(TAG, child.getValue(Tutor.class).toString());
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//                Log.w(TAG, "Failed to read value.", databaseError.toException());
-//            }
-//        });
-
 
         Button endTimeButton = (Button) findViewById(R.id.endTimeButton);
         endTimeButton.setOnClickListener(new View.OnClickListener() {
@@ -153,9 +132,9 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
                 Intent intent = new Intent(CalendarDisplay.this, CalendarDisplay.class);
                 intent.putExtra("tutor object", tutor);
                 intent.putExtra("Personal Contact Information", date);
-//                if(date.isEmpty()||startTime.isEmpty()||endTime.isEmpty()){
-//                Toast.makeText(this,"Make sure to put in a date, a start time, and an end time.", Toast.LENGTH_SHORT).show();
-//                }
+                if(date.isEmpty()||startTime.isEmpty()||endTime.isEmpty()){
+                    Toast.makeText(CalendarDisplay.this, "Make sure to put in a date, a start time, and an end time.", Toast.LENGTH_SHORT).show();
+                }
                 startActivity(intent);
             }
         });
@@ -163,6 +142,7 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
     }
 
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+
         if(isStartTime)
         {
             if(minute < 10)
@@ -184,6 +164,4 @@ public class CalendarDisplay extends AppCompatActivity implements TimePickerDial
 
     }
 
-
 }
-//
