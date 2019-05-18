@@ -67,6 +67,7 @@ public class tutorSelection extends AppCompatActivity {
         subject=tutor.getSubjects().get(tutor.getSubjects().size()-1);
         Log.w("listen", subject);
         tutorList.clear();
+        sortedTutorList.clear();
         tutorNames.clear();
         tutorPreferences.clear();
         tutorSubjects.clear();
